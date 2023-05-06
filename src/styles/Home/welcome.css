@@ -1,8 +1,18 @@
+html{
+    background-image: url("../../assets/images/other/bg-welcome-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* page */
+
 .header{
     display: flex;
     align-items: right;
     justify-content: right;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: azure;
     margin-top: 15px;
     margin-right: 35px;
@@ -12,49 +22,163 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 7rem;
+    font-size: 5rem;
     color: azure;
-    margin-top: 5%;
+    margin-top: 3%;
     text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .player-data{
     margin: 0 auto;
     margin-top: 50px;
     background-color: aquamarine;
-    width: 40%;
-    border-radius: 25%;
+    width: 30%;
+    border-radius: 15px;
     display: block;
+    padding: 20px;
 }
 
+.input-player-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.input-player-name{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.lbl-difficulty-container{
+    margin-top: 15px;
+}
+
+.lbl-difficulty{
+    color: black;
+    font-size: 1.4rem;
+}
+
+.btn-difficulty-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .btn-difficulty {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    width: calc(33.33% - 10px);
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+  
+  .btn-difficulty:last-child {
+    margin-right: 0;
+  }
+  
+  
+.btn-iniciar-container{
+    display: flex;
+    width: 100%;
+}
+
+.btn-iniciar{
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    flex-grow: 1;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+}
 
 /* auxiliary */
 .marginL{
     margin-left: 35px;
 }
 
+
 .lbl-header:hover{
     color: cadetblue;
 }
 
 .lbl-welcome{
-    text-shadow: 4px 4px grey;
+    text-shadow: 3px 3px grey;
 }
+
 
 /* responsive */
-@media (max-width: 767px) {
-    .header{
-        font-size: 1.4rem;
+
+.menu-button {
+    display: none;
+    position: fixed;
+    right: 10px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-right: 25px;
+    border: none;
+    border-radius: 60%;
+    opacity: 0.5;
+  }
+  
+  .menu {
+    display: none; 
+    position: fixed;
+    top: 70px;
+    right: 80px;
+    background-color: azure;
+  }
+
+  .menu-option{
+    padding: 15px;
+  }
+
+  .menu-option:hover{
+    background-color: lightgrey;
+  }
+
+/* Small Phones (up to 479px) */
+@media (max-width: 479px) {
+    html{
+        background-image: url("../../assets/images/other/bg-welcome-phone.jpg");
     }
 
-    .welcome{
-        font-size: 2.5rem;
+    .header {
+        display: none;
+      }
+    
+      .menu-button {
+        display: block;
+      }
+    .menu {
+        display: block; 
     }
+    
 }
 
-@media (max-width: 1023px) {
-    .welcome{
-        font-size: 5rem;
+/* Large Phones (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+    html{
+        background-image: url("../../assets/images/other/bg-welcome-phone.jpg");
     }
+    
+
+}
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    html{
+        background-image: url("../../assets/images/other/bg-welcome-phone.jpg");
+    }
+    
 }
