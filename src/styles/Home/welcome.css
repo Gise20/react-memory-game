@@ -1,0 +1,60 @@
+.header{
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    font-size: 1.8rem;
+    color: azure;
+    margin-top: 15px;
+    margin-right: 35px;
+}
+
+.welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7rem;
+    color: azure;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.player-data{
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: aquamarine;
+    width: 40%;
+    border-radius: 25%;
+    display: block;
+}
+
+
+
+/* auxiliary */
+.marginL{
+    margin-left: 35px;
+}
+
+.lbl-header:hover{
+    color: cadetblue;
+}
+
+.lbl-welcome{
+    text-shadow: 4px 4px grey;
+}
+
+/* responsive */
+@media (max-width: 767px) {
+    .header{
+        font-size: 1.4rem;
+    }
+
+    .welcome{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .welcome{
+        font-size: 5rem;
+    }
+}
