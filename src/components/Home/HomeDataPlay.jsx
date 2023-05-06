@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import "../../styles/Home/welcome.css";
-import WelcomeDifficulty from './WelcomeDifficulty';
-import WelcomeRegion from './WelcomeRegion';
+import "../../styles/Home/HomeCmp.css";
+import HomeDifficulty from './HomeDifficulty';
+import HomeRegion from './HomeRegion';
 
-const WelcomeDataPlay = () => {
+const HomeDataPlay = () => {
   return (
     <div>
       <div className="player-data">
@@ -14,8 +14,8 @@ const WelcomeDataPlay = () => {
             placeholder="Player name"
           ></input>
         </div>
-        <WelcomeDifficulty />
-        <WelcomeRegion />
+        <HomeDifficulty />
+        <HomeRegion />
         <div className="btn-iniciar-container">
           <button className="btn-iniciar">Iniciar</button>
         </div>
@@ -23,4 +23,4 @@ const WelcomeDataPlay = () => {
     </div>
   );
 };
-export default WelcomeDataPlay;
+export default HomeDataPlay;

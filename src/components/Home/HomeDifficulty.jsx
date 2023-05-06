@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { BsCheckCircleFill } from "react-icons/bs";
 
-import "../../styles/Home/welcome.css";
+import "../../styles/Home/HomeCmp.css";
 import "../../styles/extras.css";
 
-const WelcomeDifficulty = () => {
+const HomeDifficulty = () => {
 
   const [difficulty, setDifficulty] = useState('MED');
   
@@ -47,4 +47,4 @@ const WelcomeDifficulty = () => {
   );
 };
 
-export default WelcomeDifficulty;
+export default HomeDifficulty;

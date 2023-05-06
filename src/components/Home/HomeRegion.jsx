@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
-import "../../styles/Home/welcome.css";
+import "../../styles/Home/HomeCmp.css";
 
-const WelcomeRegion = () => {
+const HomeRegion = () => {
   const [selectedRegions, setSelectedRegions] = useState(['Kanto']);
 
   const handleButtonClick = (region) => {
@@ -51,4 +51,4 @@ const WelcomeRegion = () => {
   );
 };
 
-export default WelcomeRegion;
+export default HomeRegion;

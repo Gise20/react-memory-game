@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import '../../styles/Home/welcome.css'
+import '../../styles/Home/HomeCmp.css'
 import { TfiMenu } from "react-icons/tfi";
 
-const WelcomeMenu = () => {
+const HomeMenu = () => {
   
   const [isMenuVisible, setMenuVisible] = useState(false);
 
@@ -36,4 +36,4 @@ const WelcomeMenu = () => {
   
 }
 
-export default WelcomeMenu;
+export default HomeMenu;

@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Welcome from '../components/Home/Welcome';
+import HomeCmp from '../components/Home/HomeCmp';
 
 import '../styles/Home/home.css'
 
 const Home = () => {
 	return (
 		<div>
-			<Welcome />
+			<HomeCmp />
 		</div>
 	);
 }
