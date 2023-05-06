@@ -15,9 +15,9 @@ function App() {
         <Layout>
 					<Routes>
 						<Route exact path="/" element={<Home />} />
-            <Route exact path="/play" element={<Play />} />
+            {/* <Route exact path="/play" element={<Play />} />
             <Route exact path="/highscores" element={<HighScores />} />
-            <Route exact path="/notfound" element={<NotFound />} />
+            <Route exact path="/notfound" element={<NotFound />} /> */}
 					</Routes>
         </Layout>
 		  </BrowserRouter>
