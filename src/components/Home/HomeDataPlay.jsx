@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-
-import "../../styles/Home/HomeCmp.css";
 import HomeDifficulty from './HomeDifficulty';
 import HomeRegion from './HomeRegion';
+import "../../styles/Home/HomeCmp.css";
 
 const HomeDataPlay = () => {
   return (
@@ -17,7 +16,7 @@ const HomeDataPlay = () => {
         <HomeDifficulty />
         <HomeRegion />
         <div className="btn-iniciar-container">
-          <button className="btn-iniciar">Iniciar</button>
+          <button className="btn-iniciar button-style-1 button-style-1-color-3">Start</button>
         </div>
       </div>
     </div>

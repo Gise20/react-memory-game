@@ -1,51 +1,101 @@
 import React, { useState } from "react";
-import { BsCheckCircleFill } from "react-icons/bs";
+import HomeRegionButton from "./HomeRegionButton";
 import "../../styles/Home/HomeCmp.css";
 
 const HomeRegion = () => {
-  const [selectedRegions, setSelectedRegions] = useState(['Kanto']);
+  const [selectedRegions, setSelectedRegions] = useState(["Kanto"]);
+  const [selectAll, setSelectAll] = useState(false);
 
-  const handleButtonClick = (region) => {
-    if (selectedRegions.includes(region)) {
-      setSelectedRegions(selectedRegions.filter((r) => r !== region));
+  const handleCheckboxChange = (event) => {
+    const isChecked = event.target.checked;
+    setSelectAll(isChecked);
+
+    if (isChecked) {
+      const allRegions = [
+        "Kanto",
+        "Johto",
+        "Hoeen",
+        "Sinnoh",
+        "Unovao",
+        "Kalos",
+        "Alola",
+        "Galar",
+        "Hisui",
+      ];
+      setSelectedRegions(allRegions);
     } else {
-      setSelectedRegions([...selectedRegions, region]);
+      setSelectedRegions([]);
     }
-  };
- 
-  const renderButton = (region) => {
-    const isSelected = selectedRegions.includes(region);
-    const buttonClassName = `btn-region button-style-1 button-style-1-color-2${isSelected ? " region-selected" : ""}`;
-
-    return (
-      <button className={buttonClassName} onClick={() => handleButtonClick(region)}>
-        <div>
-          {region}{" "}
-          {isSelected && <BsCheckCircleFill />}
-        </div>
-      </button>
-    );
   };
 
   return (
     <div>
       <div className="lbl-region-container">
-        <label className="lbl-region">Region:</label>
+        <div>
+          <label className="lbl-region">Region:</label>
+        </div>
+        <div className="checkbox-container">
+          <label className="lbl-region">
+            {selectAll ? "Unselect All" : "Select All"}
+          </label>
+          <input className="marginL-1"
+            type="checkbox"
+            value="Select All"
+            onChange={handleCheckboxChange}
+            checked={selectAll}
+          />
+        </div>
       </div>
       <div className="btn-region-container">
-        {renderButton("Kanto")}
-        {renderButton("Johto")}
-        {renderButton("Hoeen")}
+        <HomeRegionButton
+          region="Kanto"
+          selectedRegions={selectedRegions}
+          setSelectedRegions={setSelectedRegions}
+        />
+        <HomeRegionButton
+          region="Johto"
+          selectedRegions={selectedRegions}
+          setSelectedRegions={setSelectedRegions}
+        />
+        <HomeRegionButton
+          region="Hoeen"
+          selectedRegions={selectedRegions}
+          setSelectedRegions={setSelectedRegions}
+        />
       </div>
       <div className="btn-region-container">
-        {renderButton("Sinnoh")}
-        {renderButton("Unovao")}
-        {renderButton("Kalos")}
+        <HomeRegionButton
+          region="Sinnoh"
+          selectedRegions={selectedRegions}
+          setSelectedRegions={setSelectedRegions}
+        />
+        <HomeRegionButton
+          region="Unovao"
+          selectedRegions={selectedRegions}
+          setSelectedRegions={setSelectedRegions}
+        />
+        <HomeRegionButton
+          region="Kalos"
+          selectedRegions={selectedRegions}
+          setSelectedRegions={setSelectedRegions}
+        />
       </div>
       <div className="btn-region-container">
-        {renderButton("Alola")}
-        {renderButton("Galar")}
-        {renderButton("Hisui")}
+        <HomeRegionButton
+          region="Alola"
+          selectedRegions={selectedRegions}
+          setSelectedRegions={setSelectedRegions}
+        />
+        <HomeRegionButton
+          region="Galar"
+          selectedRegions={selectedRegions}
+          setSelectedRegions={setSelectedRegions}
+        />
+        <HomeRegionButton
+          region="Hisui"
+          selectedRegions={selectedRegions}
+          setSelectedRegions={setSelectedRegions}
+        />
       </div>
     </div>
   );

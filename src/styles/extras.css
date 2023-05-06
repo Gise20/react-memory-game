@@ -1,4 +1,5 @@
 
+/* button style (75) */
 .button-style-1 {
   align-items: center;
   background-image: linear-gradient(180deg, #407ff3 50%, #04b7e4);
@@ -42,17 +43,29 @@
   background-image: linear-gradient(180deg, #8d3800 40%, #d47507);
 }
 
+.button-style-1-color-3{
+  background-image: linear-gradient(180deg, #500497 40%, #500497);
+}
+
+.button-style-1-color-3:hover{
+  background-image: linear-gradient(180deg, #500497 40%, #e000ce);
+}
+
+
+
 .region-selected{
   background-image: linear-gradient(180deg, #8d3800 40%, #d47507);
 }
 
+
 @media screen and (max-width: 991px) {
   .button-style-1 {
-    font-size: 15px;
+    font-size: 20px;
     height: 50px;
   }
 
   .button-style-1 span {
     line-height: 50px;
   }
+
 }
