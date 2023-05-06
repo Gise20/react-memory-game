@@ -21,6 +21,26 @@ const Welcome = () => {
           <button className='btn-difficulty'>Medio</button>
           <button className='btn-difficulty'>Dificil</button>
         </div>
+
+        <div className='lbl-region-container'>
+          <label className='lbl-region'>Region:</label>
+        </div>
+        <div className='btn-region-container'>
+          <button className='btn-region'>Kanto</button>
+          <button className='btn-region'>Johto</button>
+          <button className='btn-region'>Hoeen</button>
+        </div>
+        <div className='btn-region-container'>
+          <button className='btn-region'>Sinnoh</button>
+          <button className='btn-region'>Unovao</button>
+          <button className='btn-region'>Kalos</button>
+        </div>
+        <div className='btn-region-container'>
+          <button className='btn-region'>Alola</button>
+          <button className='btn-region'>Galar</button>
+          <button className='btn-region'>Hisui</button>
+        </div>
+
         <div className='btn-iniciar-container'>
           <button className='btn-iniciar'>Iniciar</button>
         </div>

@@ -22,18 +22,18 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5rem;
+    font-size: 4.5rem;
     color: azure;
-    margin-top: 3%;
+    margin-top: 1%;
     text-align: center;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .player-data{
     margin: 0 auto;
-    margin-top: 50px;
-    background-color: aquamarine;
+    margin-top: 20px;
+    background-color: rgba(127, 255, 212, 0.6); 
     width: 30%;
     border-radius: 15px;
     display: block;
@@ -56,33 +56,33 @@ html{
     border-radius: 10px;
 }
 
-.lbl-difficulty-container{
-    margin-top: 15px;
+.lbl-difficulty-container, .lbl-region-container{
+    margin-top: 10px;
 }
 
-.lbl-difficulty{
+.lbl-difficulty, .lbl-region{
     color: black;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
-.btn-difficulty-container {
+.btn-difficulty-container, .btn-region-container {
     margin-top: 10px;
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
   
-  .btn-difficulty {
+  .btn-difficulty, .btn-region {
     border: none;
     outline: none;
     flex-grow: 1;
     width: calc(33.33% - 10px);
-    height: 50px;
+    height: 45px;
     margin-right: 10px;
     border-radius: 10px;
   }
   
-  .btn-difficulty:last-child {
+  .btn-difficulty:last-child, .btn-region:last-child {
     margin-right: 0;
   }
   
@@ -128,7 +128,7 @@ html{
     margin-right: 25px;
     border: none;
     border-radius: 60%;
-    opacity: 0.5;
+    opacity: 0.4;
   }
   
   .menu {
@@ -163,7 +163,21 @@ html{
     .menu {
         display: block; 
     }
+
+    .welcome{
+        font-size: 3.1rem;
+        text-align: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .lbl-welcome{
+        margin-top: 20%;
+    }
     
+    .player-data{
+        width: 70%;
+    }
 }
 
 /* Large Phones (480px to 767px) */
