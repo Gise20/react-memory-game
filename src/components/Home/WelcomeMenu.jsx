@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/Home/welcome.css'
+import '../../styles/Home/welcome.css'
 import { TfiMenu } from "react-icons/tfi";
 
 const WelcomeMenu = () => {

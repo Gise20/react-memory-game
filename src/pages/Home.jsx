@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Welcome from '../components/Welcome';
+import Welcome from '../components/Home/Welcome';
 
 import '../styles/Home/home.css'
 
