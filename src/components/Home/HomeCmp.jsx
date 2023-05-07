@@ -1,18 +1,21 @@
-import React from 'react';
-import HomeMenu from './HomeMenu';
-import '../../styles/Home/HomeCmp.css'
-import HomeDataPlay from './HomeDataPlay';
+import React from "react";
+import HomeMenu from "./HomeMenu";
+import HomeDataPlay from "./HomeDataPlay";
+
+import "../../styles/home.css";
+import "../../styles/extras.css";
+import "../../styles/generals.css";
 
 const HomeCmp = () => {
-	return (
-		<div>
-      <HomeMenu/>
-      <div className='Home'>
-        <label className='lbl-Home'>Pokemon Memory Game</label>
+  return (
+    <div>
+      <HomeMenu />
+      <div className="home">
+        <label className="home-lbl">Pokemon Memory Game</label>
       </div>
       <HomeDataPlay />
-		</div>
-	);
-}
+    </div>
+  );
+};
 
 export default HomeCmp;

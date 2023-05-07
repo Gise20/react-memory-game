@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { BsCheckCircleFill } from "react-icons/bs";
 
-import "../../styles/Home/HomeCmp.css";
-import "../../styles/extras.css";
 
 const HomeDifficulty = () => {
 
@@ -14,12 +12,12 @@ const HomeDifficulty = () => {
 
   return (
     <div>
-      <div className="lbl-difficulty-container">
-        <label className="lbl-difficulty">Difficulty:</label>
+      <div className="home-lbl-difficulty-container">
+        <label className="home-lbl-difficulty">Difficulty:</label>
       </div>
-      <div className="btn-difficulty-container">
+      <div className="home-btn-difficulty-container">
         <button
-          className={`btn-difficulty button-style-1 ${
+          className={`home-btn-difficulty button-style-1 ${
             difficulty === "EAS" ? "dificulty-selected" : ""
           }`}
           onClick={() => handleDifficultyClick("EAS")}
@@ -27,7 +25,7 @@ const HomeDifficulty = () => {
           <div>Easy {difficulty === "EAS" ? <BsCheckCircleFill /> : ""}</div>
         </button>
         <button
-          className={`btn-difficulty button-style-1 ${
+          className={`home-btn-difficulty button-style-1 ${
             difficulty === "MED" ? "dificulty-selected" : ""
           }`}
           onClick={() => handleDifficultyClick("MED")}
@@ -35,7 +33,7 @@ const HomeDifficulty = () => {
           <div>Medium {difficulty === "MED" ? <BsCheckCircleFill /> : ""}</div>
         </button>
         <button
-          className={`btn-difficulty button-style-1 ${
+          className={`home-btn-difficulty button-style-1 ${
             difficulty === "HAR" ? "dificulty-selected" : ""
           }`}
           onClick={() => handleDifficultyClick("HAR")}

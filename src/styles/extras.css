@@ -1,4 +1,3 @@
-
 /* button style (75) */
 .button-style-1 {
   align-items: center;
@@ -31,10 +30,7 @@
     background-image: linear-gradient(180deg, #0e3c92 40%, #074555);
 }
 
-.dificulty-selected{
-  background-image: linear-gradient(180deg, #0e3c92 40%, #074555);
-}
-
+/* color 2 */
 .button-style-1-color-2{
   background-image: linear-gradient(180deg, #ec5a17 40%, #ca9b00);
 }
@@ -43,6 +39,7 @@
   background-image: linear-gradient(180deg, #8d3800 40%, #d47507);
 }
 
+/* color 3 */
 .button-style-1-color-3{
   background-image: linear-gradient(180deg, #500497 40%, #500497);
 }
@@ -52,20 +49,12 @@
 }
 
 
+/* selected */
+.dificulty-selected{
+  background-image: linear-gradient(180deg, #0e3c92 40%, #074555);
+}
 
 .region-selected{
   background-image: linear-gradient(180deg, #8d3800 40%, #d47507);
 }
 
-
-@media screen and (max-width: 991px) {
-  .button-style-1 {
-    font-size: 20px;
-    height: 50px;
-  }
-
-  .button-style-1 span {
-    line-height: 50px;
-  }
-
-}

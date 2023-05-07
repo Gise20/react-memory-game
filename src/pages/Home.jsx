@@ -1,15 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import HomeCmp from '../components/Home/HomeCmp';
-
-import '../styles/Home/home.css'
+import HomeCmp from "../components/Home/HomeCmp";
 
 const Home = () => {
-	return (
-		<div>
-			<HomeCmp />
-		</div>
-	);
-}
+  return (
+    <div>
+      <HomeCmp />
+    </div>
+  );
+};
 
 export default Home;

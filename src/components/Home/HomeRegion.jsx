@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import HomeRegionButton from "./HomeRegionButton";
-import "../../styles/Home/HomeCmp.css";
 
 const HomeRegion = () => {
   const [selectedRegions, setSelectedRegions] = useState(["Kanto"]);
@@ -30,15 +29,15 @@ const HomeRegion = () => {
 
   return (
     <div>
-      <div className="lbl-region-container">
+      <div className="home-lbl-region-container">
         <div>
-          <label className="lbl-region">Region:</label>
+          <label className="home-lbl-region">Region:</label>
         </div>
-        <div className="checkbox-container">
-          <label className="lbl-region">
+        <div className="home-checkbox-container">
+          <label className="home-lbl-region">
             {selectAll ? "Unselect All" : "Select All"}
           </label>
-          <input className="marginL-1"
+          <input style={{ marginLeft: "3px" }}
             type="checkbox"
             value="Select All"
             onChange={handleCheckboxChange}
@@ -46,7 +45,7 @@ const HomeRegion = () => {
           />
         </div>
       </div>
-      <div className="btn-region-container">
+      <div className="home-btn-region-container">
         <HomeRegionButton
           region="Kanto"
           selectedRegions={selectedRegions}
@@ -63,7 +62,7 @@ const HomeRegion = () => {
           setSelectedRegions={setSelectedRegions}
         />
       </div>
-      <div className="btn-region-container">
+      <div className="home-btn-region-container">
         <HomeRegionButton
           region="Sinnoh"
           selectedRegions={selectedRegions}
@@ -80,7 +79,7 @@ const HomeRegion = () => {
           setSelectedRegions={setSelectedRegions}
         />
       </div>
-      <div className="btn-region-container">
+      <div className="home-btn-region-container">
         <HomeRegionButton
           region="Alola"
           selectedRegions={selectedRegions}

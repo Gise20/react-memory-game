@@ -1,0 +1,301 @@
+/* page */
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+  color: azure;
+  margin-top: 1%;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* Header */
+.home-header {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  font-size: 2rem;
+  color: azure;
+  margin-top: 15px;
+  margin-right: 35px;
+}
+
+.home-lbl-header:hover {
+  color: cadetblue;
+}
+
+.home-menu-button {
+  display: none;
+  position: fixed;
+  right: 10px;
+  padding: 10px;
+  margin-top: 15px;
+  margin-right: 25px;
+  border: none;
+  border-radius: 60%;
+  opacity: 0.4;
+}
+
+.home-menu {
+  display: none;
+  position: fixed;
+  top: 70px;
+  right: 80px;
+  background-color: azure;
+}
+
+.home-menu-option {
+  padding: 15px;
+}
+
+.home-menu-option:hover {
+  background-color: lightgrey;
+}
+
+/* Tittle */
+.home-lbl {
+  text-shadow: 3px 3px grey;
+}
+
+/* Player data */
+/* input */
+.home-player-data {
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: rgba(127, 255, 212, 0.6);
+  width: 35%;
+  border-radius: 15px;
+  display: block;
+  padding: 20px;
+}
+
+.home-input-player-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-input-player-name {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+/* Player data */
+/* Difficulty and Region */
+
+.home-lbl-difficulty-container,
+.home-lbl-region-container {
+  margin-top: 10px;
+}
+
+.home-lbl-difficulty,
+.home-lbl-region {
+  color: black;
+  font-size: 1.2rem;
+}
+
+.home-btn-difficulty-container,
+.home-btn-region-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.home-btn-difficulty,
+.home-btn-region {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  width: calc(33.33% - 10px);
+  height: 45px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.home-btn-difficulty:last-child,
+.home-btn-region:last-child {
+  margin-right: 0;
+}
+
+.home-lbl-region-container {
+  display: flex;
+  align-items: center;
+}
+
+.home-checkbox-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-checkbox-container input[type="checkbox"] {
+  zoom: 2; /* Adjust the zoom value as needed */
+}
+
+
+.home-btn-iniciar-container {
+  display: flex;
+  width: 100%;
+}
+
+.home-btn-iniciar {
+  border: none;
+  outline: none;
+  margin-top: 15px;
+  flex-grow: 1;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+}
+
+
+
+
+
+/* responsive */
+/* Small Phones (up to 479px) */
+@media (max-width: 479px) {
+   /* header */
+  .home-header {
+    display: none;
+  }
+
+  .home-menu {
+    display: block;
+  }
+
+  .home-menu-button {
+    display: block;
+  }
+  
+  /* Game name */
+  .home {
+    font-size: 3.1rem;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .home-lbl {
+    margin-top: 20%;
+  }
+
+  /* Player data */
+  .home-player-data {
+    width: 90%;
+  }
+
+  /* Player data  */
+  /* Botones */
+  .button-style-1{
+    font-size: 20px !important;
+    height: 50px;
+  }
+
+  /* Player data */
+  /* Checkbox*/
+  .home-checkbox-container input[type="checkbox"] {
+    zoom: 2.5; /* Adjust the zoom value as needed */
+  }
+}
+
+/* Large Phones (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  html {
+    background-image: url("../assets/images/other/bg-home-phone.jpg");
+  }
+
+  /* Header */
+  .home-header {
+    font-size: 2.5rem;
+  }
+
+  /* Game name */
+  .home-lbl {
+    margin-top: 12%;
+  }
+
+  /* Player data */
+  .home-player-data {
+    width: 85%;
+  }
+
+  /* Player data */
+  /* Input */
+  .home-input-player-name {
+    font-size: 35px;
+  }
+
+  /* Player data  */
+  /* Botones */
+  .button-style-1{
+    font-size: 25px !important;
+    height: 75px;
+  }
+
+  /* Player data */
+  /* Difficulty and Region */
+  .home-lbl-difficulty,
+  .home-lbl-region {
+    font-size: 2rem;
+  }
+  
+  /* Player data */
+  /* Checkbox*/
+  .home-checkbox-container input[type="checkbox"] {
+    zoom: 3.5; /* Adjust the zoom value as needed */
+  }
+}
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Header */
+  .home-header {
+    font-size: 2rem;
+  }
+
+  /* Game name */
+  .home-lbl {
+    margin-top: 12%;
+  }
+
+  /* Player data */
+  .home-player-data {
+    width: 75%;
+  }
+  /* Player data */
+  /* Input */
+  .home-input-player-name {
+    font-size: 35px;
+  }
+
+  /* Player data  */
+  /* Botones */
+  .button-style-1{
+    font-size: 25px !important;
+    height: 70px;
+  }
+
+  /* Player data */
+  /* Difficulty and Region */
+  .home-lbl-difficulty,
+  .home-lbl-region {
+    font-size: 2rem;
+  }
+
+  /* Player data */
+  /* Checkboz */
+  .home-checkbox-container input[type="checkbox"] {
+    zoom: 3.5; /* Adjust the zoom value as needed */
+  }
+}
