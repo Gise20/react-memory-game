@@ -61,7 +61,7 @@ const HomeMenu = () => {
             <label>HighScores</label>
           </div>
           <div className="home-menu-option">
-            <label>About</label>
+            <label onClick={handleClickAbout} >About</label>
           </div>
         </div>
       )}
