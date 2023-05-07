@@ -1,25 +1,36 @@
 import React, { useState } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 
+// Define the HomeRegionButton component as a functional component
 const HomeRegionButton = ({ region, selectedRegions, setSelectedRegions }) => {
-    const isSelected = selectedRegions.includes(region);
-    const buttonClassName = `home-btn-region button-style-1 button-style-1-color-2${isSelected ? " region-selected" : ""}`;
-  
-    const handleButtonClick = () => {
-      if (isSelected) {
-        setSelectedRegions(selectedRegions.filter((r) => r !== region));
-      } else {
-        setSelectedRegions([...selectedRegions, region]);
-      }
-    };
-  
-    return (
-      <button className={buttonClassName} onClick={handleButtonClick}>
-        <div>
-          {region} {isSelected && <BsCheckCircleFill />}
-        </div>
-      </button>
-    );
+  // Check if the current region is selected
+  const isSelected = selectedRegions.includes(region);
+
+  // Define the CSS class for the button based on selection state
+  const buttonClassName = `home-btn-region button-style-1 button-style-1-color-2${
+    isSelected ? " region-selected" : ""
+  }`;
+
+  // Event handler for when the button is clicked
+  const handleButtonClick = () => {
+    if (isSelected) {
+      // If the region is already selected, remove it from the selected regions
+      setSelectedRegions(selectedRegions.filter((r) => r !== region));
+    } else {
+      // If the region is not selected, add it to the selected regions
+      setSelectedRegions([...selectedRegions, region]);
+    }
   };
 
-export default HomeRegionButton;
+  // Render the component
+  return (
+    <button className={buttonClassName} onClick={handleButtonClick}>
+      <div>
+        {region} {isSelected && <BsCheckCircleFill />}
+        {/* Display the region name and a checkmark icon if it's selected */}
+      </div>
+    </button>
+  );
+};
+
+export default HomeRegionButton; // Export the HomeRegionButton component as the default export

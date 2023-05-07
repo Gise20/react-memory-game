@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { BsCheckCircleFill } from "react-icons/bs";
 
-
+// Define a functional component called HomeDifficulty
 const HomeDifficulty = () => {
 
+  // Initialize difficulty as Medium using the useState hook
   const [difficulty, setDifficulty] = useState('MED');
-  
+
+  // Event handler for when a difficulty button is clicked
   const handleDifficultyClick = (newDifficulty) => {
     setDifficulty(newDifficulty);
   };
 
+  // Render the component
   return (
     <div>
       <div className="home-lbl-difficulty-container">
@@ -45,4 +48,4 @@ const HomeDifficulty = () => {
   );
 };
 
-export default HomeDifficulty;
+export default HomeDifficulty; // Export the HomeDifficulty component as the default export
