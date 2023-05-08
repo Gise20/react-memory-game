@@ -23,7 +23,7 @@ const HomeDataPlay = () => {
 
         {/* Start button */}
         <div className="home-btn-iniciar-container">
-          <button className="home-btn-iniciar button-style-1 button-style-1-color-3">Start</button>
+          <button className="home-btn-iniciar button-style-1 button-style-1-color-3 home-btn_media_adjust">Start</button>
         </div>
       </div>
     </div>

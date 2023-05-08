@@ -1,56 +1,94 @@
 /* Header */
-.about-header{
-    background-color: rgba(85, 131, 218, 0.6);
-    display: flex;
-    padding: 2%;
+.about-header {
+  background-color: rgba(85, 131, 218, 0.6);
+  display: flex;
+  padding: 2%;
 }
 
-.about-lbl-name{
-    font-size: 50px;
-    color: azure;
-    text-shadow: 3px 3px grey;
+.about-lbl-name {
+  font-size: 50px;
+  color: azure;
+  text-shadow: 3px 3px grey;
 }
 
-.about-header-social{
-    display: flex;
-    align-items: center;
-    gap: 15px; 
-    margin-left: auto;
+.about-header-social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
 }
 
-.about-header-social-icon{
-    font-size: 30px;
-    color: azure;
+.about-header-social-icon {
+  font-size: 30px;
+  color: azure;
 }
 
 /* Data */
-.about-data-container{
-    padding-top: 2.5%;
-    padding-left: 5%;
-    padding-right: 5%;
-    
+.about-data-container {
+  padding-top: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
-.about-data{
-    background-color: rgb(240, 248, 255, 0.8);
-    padding-top: 2.5%;
-    padding-left: 5%;
-    padding-right: 5%;
+.about-data {
+  background-color: rgb(240, 248, 255, 0.8);
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 28px;
 }
 
+/* Data */
+/* About Me */
+.about-me-container {
+  display: flex;
+}
+
+.about-me-lbl {
+  font-size: 1.4em;
+  text-decoration: underline;
+}
+
+.about-me-description-container {
+  margin-top: 1.5%;
+}
+
+.about-me-resume-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 3%;
+}
+
+.about-me-btn-resume {
+  width: 40%;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-me-resume-icon {
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.about-me-img-stock {
+  width: 450px;
+}
 
 /* responsive */
 /* Small Phones (up to 479px) */
 @media (max-width: 479px) {
-    
- }
- 
- /* Large Phones (480px to 767px) */
- @media (min-width: 480px) and (max-width: 767px) {
-  
- }
- 
- /* Tablets (768px to 1023px) */
- @media (min-width: 768px) and (max-width: 1023px) {
-   
- }
+}
+
+/* Large Phones (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+}
+
+/* Tablets (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+}

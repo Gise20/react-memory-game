@@ -7,7 +7,7 @@ const HomeRegionButton = ({ region, selectedRegions, setSelectedRegions }) => {
   const isSelected = selectedRegions.includes(region);
 
   // Define the CSS class for the button based on selection state
-  const buttonClassName = `home-btn-region button-style-1 button-style-1-color-2${
+  const buttonClassName = `home-btn-region button-style-1 home-btn_media_adjust button-style-1-color-2${
     isSelected ? " region-selected" : ""
   }`;
 

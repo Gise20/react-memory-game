@@ -20,7 +20,7 @@ const HomeDifficulty = () => {
       </div>
       <div className="home-btn-difficulty-container">
         <button
-          className={`home-btn-difficulty button-style-1 ${
+          className={`home-btn-difficulty button-style-1 home-btn_media_adjust ${
             difficulty === "EAS" ? "dificulty-selected" : ""
           }`}
           onClick={() => handleDifficultyClick("EAS")}
@@ -28,7 +28,7 @@ const HomeDifficulty = () => {
           <div>Easy {difficulty === "EAS" ? <BsCheckCircleFill /> : ""}</div>
         </button>
         <button
-          className={`home-btn-difficulty button-style-1 ${
+          className={`home-btn-difficulty button-style-1 home-btn_media_adjust ${
             difficulty === "MED" ? "dificulty-selected" : ""
           }`}
           onClick={() => handleDifficultyClick("MED")}
@@ -36,7 +36,7 @@ const HomeDifficulty = () => {
           <div>Medium {difficulty === "MED" ? <BsCheckCircleFill /> : ""}</div>
         </button>
         <button
-          className={`home-btn-difficulty button-style-1 ${
+          className={`home-btn-difficulty button-style-1 home-btn_media_adjust ${
             difficulty === "HAR" ? "dificulty-selected" : ""
           }`}
           onClick={() => handleDifficultyClick("HAR")}
