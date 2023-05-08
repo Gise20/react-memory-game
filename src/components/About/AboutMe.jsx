@@ -1,6 +1,6 @@
 import React from "react";
 import { HiDocumentText } from "react-icons/hi";
-import imgStock from '../../assets/images/stock-images/stock-image.png'
+import imgStock from "../../assets/images/stock-images/stock-image.png";
 
 const AboutMe = () => {
   return (
@@ -17,7 +17,9 @@ const AboutMe = () => {
             Management IT with use of agile methodologys.
           </label>
           <div className="about-me-resume-container">
-            <button class="button-style-2 about-me-btn-resume" role="button">See my resume <HiDocumentText className="about-me-resume-icon"/></button>
+            <button class="button-style-2 about-me-btn-resume" role="button">
+              See my resume <HiDocumentText className="about-me-resume-icon" />
+            </button>
           </div>
         </div>
       </div>
