@@ -5,6 +5,7 @@ import { SiLinkedin } from "react-icons/si";
 // Import CSS stylesheets
 import "../../styles/about.css";
 
+// Creating a functional component called AboutHeader
 const AboutHeader = () => {
   // Event handler for clicking the "GitHub" label
   const handleClickGitHub = () => {
@@ -19,13 +20,17 @@ const AboutHeader = () => {
   return (
     <div className="about-header">
       <div>
+        {/* Label for the name */}
         <label className="about-lbl-name">Gisella Rosado Perrone</label>
       </div>
       <div className="about-header-social">
+        {/* GitHub icon with click event handler */}
         <VscGithubInverted
           className="about-header-social-icon"
           onClick={handleClickGitHub}
         />
+        
+        {/* LinkedIn icon with click event handler */}
         <SiLinkedin
           className="about-header-social-icon"
           onClick={handleClickLinkedIn}

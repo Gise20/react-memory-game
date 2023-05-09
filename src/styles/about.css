@@ -251,6 +251,16 @@
   font-size: 0.9em;
 }
 
+/* Data */
+/* Back to game */
+.about-data-back-game {
+  display: flex;
+  align-items: right;
+  text-align: right;
+  justify-content: right;
+  margin-top: 5%;
+}
+
 /* responsive */
 /* Small Phones (up to 479px) */
 @media (max-width: 479px) {
@@ -307,14 +317,13 @@
     width: 85px;
   }
 
-  .about-stack-footer{
+  .about-stack-footer {
     margin-top: 6%;
     padding-left: 5%;
     padding-right: 5%;
   }
 
   /* Data */
-  /* About Project */
   /* About Project */
   .about-project-container {
     display: block;
@@ -326,11 +335,12 @@
     width: 100%;
   }
 
-  .about-education-cards-container, .about-experience-cards-container{
+  .about-education-cards-container,
+  .about-experience-cards-container {
     display: block;
   }
 
-  .about-card{
+  .about-card {
     width: 90%;
     margin: 0 auto;
     margin-top: 6%;
@@ -339,8 +349,184 @@
 
 /* Large Phones (480px to 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
+  /* Header */
+  .about-lbl-name {
+    font-size: 2.6em;
+  }
+
+  .about-header-social-icon {
+    font-size: 2.2em;
+  }
+
+  /* Data */
+  .about-data-container {
+    padding: 5%;
+  }
+
+  .about-data {
+    font-size: 2.1em;
+    padding: 5%;
+  }
+
+  /* Data */
+  /* About Me */
+  .about-me-container {
+    display: block;
+  }
+
+  .about-me-resume-container {
+    margin-top: 5%;
+  }
+
+  .about-me-btn-resume {
+    width: 75%;
+  }
+
+  .about-me-resume-icon {
+    font-size: 1.8em;
+  }
+
+  .about-me-img-stock {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .about-stacks-icon-container {
+    padding-top: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    gap: 22px;
+  }
+
+  .about-stack-circle-container {
+    height: 85px;
+    width: 85px;
+  }
+
+  .about-stack-footer {
+    margin-top: 6%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  /* Data */
+  /* About Project */
+  .about-project-container {
+    display: block;
+    margin-top: 5%;
+    text-align: left;
+  }
+
+  .about-project-img-stock {
+    width: 100%;
+  }
+
+  .about-education-cards-container,
+  .about-experience-cards-container {
+    display: block;
+  }
+
+  .about-card {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 6%;
+  }
+
+  /* Data */
+  /* Back to game */  
+  .about-data-back-game-btn{
+    font-size: .6em;
+  }
 }
 
 /* Tablets (768px to 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
+  /* Header */
+  .about-lbl-name {
+    font-size: 3.2em;
+  }
+
+  .about-header-social-icon {
+    font-size: 2.8em;
+  }
+
+  /* Data */
+  .about-data-container {
+    padding: 5%;
+  }
+
+  .about-data {
+    font-size: 2.1em;
+    padding: 5%;
+  }
+
+  /* Data */
+  /* About Me */
+  .about-me-container {
+    display: block;
+  }
+
+  .about-me-resume-container {
+    margin-top: 5%;
+  }
+
+  .about-me-btn-resume {
+    width: 60%;
+  }
+
+  .about-me-resume-icon {
+    font-size: 1.8em;
+  }
+
+  .about-me-img-stock {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .about-stacks-icon-container {
+    padding-top: 5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    gap: 22px;
+  }
+
+  .about-stack-circle-container {
+    height: 120px;
+    width: 120px;
+  }
+
+  .about-stack-footer {
+    margin-top: 6%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  /* Data */
+  /* About Project */
+  .about-project-container {
+    display: block;
+    margin-top: 5%;
+    text-align: left;
+  }
+
+  .about-project-img-stock {
+    width: 100%;
+  }
+
+  .about-education-cards-container,
+  .about-experience-cards-container {
+    display: block;
+  }
+
+  .about-card {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 6%;
+  }
+
+   /* Data */
+  /* Back to game */  
+  .about-data-back-game-btn{
+    font-size: .7em;
+  }
 }
