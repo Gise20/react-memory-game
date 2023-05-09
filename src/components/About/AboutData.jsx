@@ -1,6 +1,7 @@
 import React from "react";
 import AboutMe from "./AboutMe";
 import AboutStack from "./AboutStack";
+import AboutProject from "./AboutProject";
 
 const AboutData = () => {
   return (
@@ -9,6 +10,7 @@ const AboutData = () => {
         <div className="about-data">
           <AboutMe />
           <AboutStack />
+          <AboutProject />
         </div>
       </div>
     </div>

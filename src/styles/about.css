@@ -84,7 +84,7 @@
 /* Data */
 /* What's my stack */
 .about-stack-container {
-  margin-top: 3%;
+  margin-top: 8%;
 }
 
 .about-stacks-lbl {
@@ -144,6 +144,23 @@
   margin-top: 3%;
   padding-left: 10%;
   padding-right: 10%;
+}
+
+/* Data */
+/* About Project */
+.about-project-container {
+  display: flex;
+  margin-top: 8%;
+  text-align: right;
+}
+
+.about-project-img-stock {
+  width: 400px;
+}
+
+.about-project-lbl{
+  font-size: 1.4em;
+  text-decoration: underline;
 }
 
 /* responsive */
