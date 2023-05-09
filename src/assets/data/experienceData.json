@@ -1,0 +1,23 @@
+[
+  {
+    "institution": "IkuSoft",
+    "degree": "Desarrolladora de Software Full-Stack",
+    "years": "Jan 2022 - Actualidad",
+    "logo": "ikusoft",
+    "cardStyle": "about-experience-card-ikusoft"
+  },
+  {
+    "institution": "Freelancer",
+    "degree": "Software Developer",
+    "years": "Jan 2018 - Jan 2022",
+    "logo": "freelancer",
+    "cardStyle": "about-experience-card-freelancer"
+  },
+  {
+    "institution": "Benemérita Sociedad Protectora de la Infancia",
+    "degree": "Software Developer",
+    "years": "Oct 2016 - Jun 2017",
+    "logo": "bspi",
+    "cardStyle": "about-experience-card-bspi"
+  }
+]

@@ -12,6 +12,14 @@
       "years": "2023 - Actualidad",
       "logo": "platzi",
       "cardStyle": "about-education-card-platzi"
+    },
+    {
+      "institution": "EF SET",
+      "degree": "English level C2",
+      "years": "Mar 2023",
+      "logo": "efset",
+      "cardStyle": "about-education-card-efset"
     }
+    
   ]
   

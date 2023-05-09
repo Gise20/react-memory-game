@@ -168,17 +168,17 @@
 }
 
 /* Data */
-/* About Education */
-.about-education-container {
+/* About Education and Experience*/
+.about-education-container, .about-experience-container {
   margin-top: 8%;
 }
 
-.about-education-lbl{
+.about-education-lbl, .about-experience-lbl{
   font-size: 1.4em;
   text-decoration: underline;
 }
 
-.about-education-cards-container{
+.about-education-cards-container, .about-experience-cards-container{
   display: flex;
   justify-content: center;
   gap: 25px;
@@ -221,6 +221,23 @@
 .about-education-card-platzi{
   background-color: #99c93f;
 }
+
+.about-education-card-efset{
+  background-color: #000000;
+}
+
+.about-experience-card-ikusoft{
+  background-color: #282f39;
+}
+
+.about-experience-card-freelancer{
+  background-color: #1e3e56;
+}
+
+.about-experience-card-bspi{
+  background-color: #b3071c;
+}
+
 
 .about-card-img{
   width: 100%;

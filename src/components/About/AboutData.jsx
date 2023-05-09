@@ -3,6 +3,7 @@ import AboutMe from "./AboutMe";
 import AboutStack from "./AboutStack";
 import AboutProject from "./AboutProject";
 import AboutEducation from "./AboutEducation";
+import AboutExperience from './AboutExperience'
 
 const AboutData = () => {
   return (
@@ -13,6 +14,7 @@ const AboutData = () => {
           <AboutStack />
           <AboutProject />
           <AboutEducation />
+          <AboutExperience />
         </div>
       </div>
     </div>

@@ -3,6 +3,10 @@ import { HiDocumentText } from "react-icons/hi";
 import imgStock from "../../assets/images/stock-images/stock-image.png";
 
 const AboutMe = () => {
+  const handleClickResume = () => {
+    window.open("https://www.linkedin.com/in/gisellarosado/", "_blank");
+  };
+
   return (
     <div className="about-me-container">
       <div>
@@ -17,7 +21,7 @@ const AboutMe = () => {
             Management IT with use of agile methodologys.
           </label>
           <div className="about-me-resume-container">
-            <button class="button-style-2 about-me-btn-resume" role="button">
+            <button class="button-style-2 about-me-btn-resume" role="button" onClick={handleClickResume}>
               See my resume <HiDocumentText className="about-me-resume-icon" />
             </button>
           </div>
