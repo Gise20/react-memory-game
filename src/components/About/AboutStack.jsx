@@ -1,19 +1,28 @@
 import React from "react";
-import imgReact from "../../assets/images/stacks-icons/reactjs.png";
+import stacksData from "../../assets/data/stacksData.json";
+import AboutStackImage from "./AboutStackImage";
 
-const AboutStack = () =>{
-    return(
-        <div>
-              <label  className="about-stacks-lbl">What's my stack?</label>
-              <div class="about-stack-circle-container">
-                <div class="about-stack-circle-shadow">
-                  <div class="about-stack-circle">
-                    <img src={imgReact} alt="Your Image" class="about-stack-centered-image"/>
-                  </div>
-                </div>
-              </div>
-        </div>
-    );
+const AboutStack = () => {
+  return (
+    <div className="about-stack-container">
+      <label className="about-stacks-lbl">What's my stack?</label>
+      <div className="about-stacks-icon-container">
+        {stacksData.stacks.map((stack, index) => (
+          <AboutStackImage
+            key={index}
+            alt={stack.alt}
+            fileName={stack.fileName}
+          />
+        ))}
+      </div>
+      <div className="about-stack-footer">
+        <label>
+          Full Stack Developer expert in web design, programming languages,
+          databases, servers, APIs and Version Control Systems.
+        </label>
+      </div>
+    </div>
+  );
 };
 
-export default AboutStack
+export default AboutStack;

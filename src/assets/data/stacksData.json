@@ -1,0 +1,56 @@
+{
+  "stacks": [
+    {
+      "alt": "HTML",
+      "fileName": "html.png"
+    },
+    {
+      "alt": "CSS",
+      "fileName": "css.png"
+    },
+    {
+      "alt": "Javascript",
+      "fileName": "js.png"
+    },
+    {
+      "alt": "React",
+      "fileName": "reactjs.png"
+    },
+    {
+      "alt": "Node.js",
+      "fileName": "node.png"
+    },
+    {
+      "alt": "Python",
+      "fileName": "python.png"
+    },
+    {
+      "alt": "CShard",
+      "fileName": "cshard.png"
+    },
+    {
+      "alt": "Visual Basic",
+      "fileName": "vb.png"
+    },
+    {
+      "alt": "ASP.Net",
+      "fileName": "aspnet.png"
+    },
+    {
+      "alt": "Git",
+      "fileName": "git.png"
+    },
+    {
+      "alt": "My SQL",
+      "fileName": "mysql.png"
+    },
+    {
+      "alt": "MS SQL Server",
+      "fileName": "mssql.png"
+    },
+    {
+      "alt": "PostgreSQL",
+      "fileName": "postgresql.png"
+    }
+  ]
+}
