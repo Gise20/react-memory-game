@@ -163,6 +163,67 @@
   text-decoration: underline;
 }
 
+/* Data */
+/* About Education */
+.about-education-container {
+  margin-top: 8%;
+}
+
+.about-education-lbl{
+  font-size: 1.4em;
+  text-decoration: underline;
+}
+
+.about-education-cards-container{
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 2% 2% 0% 2%;
+}
+
+.about-education-card{
+  width: 40%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+  
+}
+
+.about-education-card-header{
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: .7em;
+  padding: 1%;
+}
+
+.about-education-card-content{
+  padding: 20px;
+  text-align: center;
+}
+
+.about-education-card-ucsg{
+  background-color: #972b30
+}
+
+.about-education-card-platzi{
+  background-color: #99c93f;
+}
+
+.about-education-card-img{
+  width: 100%;
+}
+
+.about-education-card-description{
+  margin-top: 2%;
+}
+
+.about-education-card-years{
+  font-size: .7em;
+}
+
 /* responsive */
 /* Small Phones (up to 479px) */
 @media (max-width: 479px) {
