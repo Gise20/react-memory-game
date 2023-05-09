@@ -6,7 +6,7 @@
 }
 
 .about-lbl-name {
-  font-size: 50px;
+  font-size: 3em;
   color: azure;
   text-shadow: 3px 3px grey;
 }
@@ -19,7 +19,7 @@
 }
 
 .about-header-social-icon {
-  font-size: 30px;
+  font-size: 1.75em;
   color: azure;
 }
 
@@ -37,7 +37,7 @@
   padding-bottom: 4%;
   padding-left: 5%;
   padding-right: 5%;
-  font-size: 28px;
+  font-size: 1.5em;
 }
 
 /* Data */
@@ -73,7 +73,7 @@
 }
 
 .about-me-resume-icon {
-  font-size: 30px;
+  font-size: 1.5em;
   margin-right: 5px;
 }
 
@@ -124,6 +124,10 @@
   overflow: hidden;
   border-radius: 50%;
   background-color: white;
+}
+
+.about-stack-circle:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
 }
 
 .about-stack-centered-image {
@@ -181,30 +185,30 @@
   padding: 2% 2% 0% 2%;
 }
 
-.about-education-card{
+.about-card{
   width: 35%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
   
 }
 
-.about-education-card:hover{
+.about-card:hover{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.9);
   
 }
 
-.about-education-card-header{
+.about-card-header{
   height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
-  font-size: .7em;
+  font-size: 1em;
   padding: 1%;
 }
 
-.about-education-card-content{
+.about-card-content{
   padding: 20px;
   text-align: center;
   font-size: .9em;
@@ -218,16 +222,16 @@
   background-color: #99c93f;
 }
 
-.about-education-card-img{
+.about-card-img{
   width: 100%;
 }
 
-.about-education-card-description{
+.about-card-description{
   margin-top: 2%;
 }
 
-.about-education-card-years{
-  font-size: .8em;
+.about-card-years{
+  font-size: .9em;
 }
 
 /* responsive */

@@ -3,14 +3,14 @@
       "institution": "Universidad Cátolica de Santiago de Guayaquil",
       "degree": "Ingeniería en Sistemas Computacionales",
       "years": "2012 - 2017",
-      "logo": "../../assets/images/education-experience/ucsg.png",
+      "logo": "ucsg",
       "cardStyle": "about-education-card-ucsg"
     },
     {
       "institution": "Platzi",
       "degree": "Educación continua",
       "years": "2023 - Actualidad",
-      "logo": "../../assets/images/education-experience/platzi.png",
+      "logo": "platzi",
       "cardStyle": "about-education-card-platzi"
     }
   ]
