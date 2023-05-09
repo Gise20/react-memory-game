@@ -1,46 +1,35 @@
 import React from "react";
+import AboutEducationCard from "./AboutEducationCard";
 import ucsgLogo from "../../assets/images/education-experience/ucsg.png";
 import platziLogo from "../../assets/images/education-experience/platzi.png";
 
 const AboutEducation = () => {
+  const educationData = [
+    {
+      institution: "Universidad Cátolica de Santiago de Guayaquil",
+      degree: "Ingeniería en Sistemas Computacionales",
+      years: "2012 - 2017",
+      logo: ucsgLogo,
+      cardStyle: "about-education-card-ucsg",
+    },
+    {
+      institution: "Platzi",
+      degree: "Desarrollo web",
+      years: "2023 - Actualidad",
+      logo: platziLogo,
+      cardStyle: "about-education-card-platzi",
+    },
+  ];
+
   return (
     <div className="about-education-container">
       <div>
         <label className="about-education-lbl">Education</label>
       </div>
       <div className="about-education-cards-container">
-        <div className="about-education-card">
-          <div className="about-education-card-header about-education-card-ucsg">
-            <label>Universidad Cátolica de Santiago de Guayaquil</label>
-          </div>
-          <div className="about-education-card-content">
-            <div>
-              <img className="about-education-card-img" src={ucsgLogo}></img>
-            </div>
-            <div className="about-education-card-description">
-              <label>Ingeniería en Sistemas Computacionales</label>
-              <br/>
-              <label className="about-education-card-years">2012 - 2017</label>
-            </div>            
-          </div>
-
-          
-        </div>
-        <div className="about-education-card">
-          <div className="about-education-card-header about-education-card-platzi">
-            <label>Platzi</label>
-          </div>
-          <div className="about-education-card-content">
-            <div>
-              <img className="about-education-card-img" src={platziLogo}></img>
-            </div>
-            <div className="about-education-card-description">
-              <label>Educación continua</label>
-              <br/>
-              <label className="about-education-card-years">2023 - Actualidad</label>
-            </div>            
-          </div>
-        </div>
+        {educationData.map((education, index) => (
+          <AboutEducationCard key={index} {...education} />
+        ))}
       </div>
     </div>
   );

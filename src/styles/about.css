@@ -182,9 +182,14 @@
 }
 
 .about-education-card{
-  width: 40%;
+  width: 35%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+  
+}
+
+.about-education-card:hover{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.9);
   
 }
 
@@ -202,6 +207,7 @@
 .about-education-card-content{
   padding: 20px;
   text-align: center;
+  font-size: .9em;
 }
 
 .about-education-card-ucsg{
@@ -221,7 +227,7 @@
 }
 
 .about-education-card-years{
-  font-size: .7em;
+  font-size: .8em;
 }
 
 /* responsive */
