@@ -22,8 +22,8 @@ const HomeRegion = () => {
         "Unovao",
         "Kalos",
         "Alola",
+        "Paldea",
         "Galar",
-        "Hisui",
       ];
       setSelectedRegions(allRegions);
     } else {
