@@ -1,5 +1,3 @@
-import React from "react";
-
 // Importing the AboutHeader and AboutData components
 import AboutHeader from "./AboutHeader";
 import AboutData from "./AboutData";
@@ -10,7 +8,7 @@ const AboutCmp = () => {
     <div>
       {/* Rendering the AboutHeader component */}
       <AboutHeader />
-      
+
       {/* Rendering the AboutData component */}
       <AboutData />
     </div>

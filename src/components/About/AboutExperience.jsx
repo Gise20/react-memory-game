@@ -1,5 +1,3 @@
-import React from "react";
-
 // Importing the ExperienceCard component and experienceData from a JSON file
 import ExperienceCard from "./AboutCard";
 import experienceData from "../../assets/data/experienceData.json";

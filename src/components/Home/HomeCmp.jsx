@@ -1,4 +1,3 @@
-import React from "react";
 import HomeMenu from "./HomeMenu";
 import HomeDataPlay from "./HomeDataPlay";
 

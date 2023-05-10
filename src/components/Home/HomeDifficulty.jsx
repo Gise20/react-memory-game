@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BsCheckCircleFill } from "react-icons/bs";
 
 // Define a functional component called HomeDifficulty

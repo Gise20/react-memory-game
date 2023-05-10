@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import HomeRegionButton from "./HomeRegionButton";
 
 // Define the HomeRegion component as a functional component
@@ -94,12 +94,12 @@ const HomeRegion = () => {
           setSelectedRegions={setSelectedRegions}
         />
         <HomeRegionButton
-          region="Galar"
+          region="Paldea"
           selectedRegions={selectedRegions}
           setSelectedRegions={setSelectedRegions}
         />
         <HomeRegionButton
-          region="Hisui"
+          region="Galar"
           selectedRegions={selectedRegions}
           setSelectedRegions={setSelectedRegions}
         />

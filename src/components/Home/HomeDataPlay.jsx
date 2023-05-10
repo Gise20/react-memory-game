@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import HomeDifficulty from './HomeDifficulty';
 import HomeRegion from './HomeRegion';
 

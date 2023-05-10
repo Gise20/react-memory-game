@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 
 // Define the HomeRegionButton component as a functional component
