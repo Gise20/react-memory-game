@@ -30,7 +30,7 @@ const AboutData = () => {
           <div className="about-data-back-game">
             {/* Button to go back to the game */}
             <button
-              class="button-style-3 about-data-back-game-btn"
+              className="button-style-3 about-data-back-game-btn"
               role="button"
               onClick={handleClickBakcToGame}
             >

@@ -26,7 +26,7 @@ const AboutMe = () => {
           <div className="about-me-resume-container">
             {/* Button to see the resume */}
             <button
-              class="button-style-2 about-me-btn-resume"
+              className="button-style-2 about-me-btn-resume"
               role="button"
               onClick={handleClickResume}
             >
