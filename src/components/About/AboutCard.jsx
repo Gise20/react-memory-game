@@ -6,10 +6,10 @@ import IkuSoft from "../../assets/images/education-experience/ikusoft.png";
 import Freelancer from "../../assets/images/education-experience/freelancer.png";
 import Bspi from "../../assets/images/education-experience/bspi.png";
 
-// Creating a functional component called AboutCard that takes props as input
+// Creating a functional component called AboutCard that takes props as input 
 const AboutCard = ({ institution, degree, years, logo, cardStyle }) => {
 
-  // Declaring a variable to store the LogoComponent
+  // Declaring a variable to store the Component
   let LogoComponent;
 
   // Switch statement to determine which logo component to assign based on the logo prop
