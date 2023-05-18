@@ -1,3 +1,4 @@
+import React from 'react'
 import { VscGithubInverted } from "react-icons/vsc";
 import { SiLinkedin } from "react-icons/si";
 

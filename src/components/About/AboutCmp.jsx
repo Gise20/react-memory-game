@@ -1,3 +1,4 @@
+import React from 'react'
 // Importing the AboutHeader and AboutData components
 import AboutHeader from "./AboutHeader";
 import AboutData from "./AboutData";

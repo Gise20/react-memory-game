@@ -1,3 +1,4 @@
+import React from 'react'
 // Importing the logos for different institutions
 import Ucsg from "../../assets/images/education-experience/ucsg.png";
 import Platzi from "../../assets/images/education-experience/platzi.png";

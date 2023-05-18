@@ -1,3 +1,4 @@
+import React from 'react'
 import stacksData from "../../assets/data/stacksData.json";
 import AboutStackImage from "./AboutStackImage";
 
