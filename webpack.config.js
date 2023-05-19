@@ -4,7 +4,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: "./src/index.js",
-  output: { path: path.resolve(__dirname, "dist"), filename: "bundle.js", publicPath: '/'},
+  stats: { warnings: false },
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+    publicPath: "/",
+  },
   resolve: { extensions: [".js", ".jsx"] },
   module: {
     rules: [
@@ -16,15 +21,12 @@ module.exports = {
       { test: /\.html$/, use: [{ loader: "html-loader" }] },
       {
         test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader'
-        ]
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.png/,
-        type: "asset/resource"
-      }
+        type: "asset/resource",
+      },
     ],
   },
   plugins: [
@@ -38,6 +40,9 @@ module.exports = {
     static: path.join(__dirname, "dist"),
     compress: true,
     port: 3008,
-    historyApiFallback: true
-  }
+    historyApiFallback: true,
+    client: {
+      overlay: false,
+    }
+  },
 };
