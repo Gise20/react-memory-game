@@ -20,7 +20,7 @@ const AboutProject = () => {
           <label>
             This is a personal project demonstrating my proficiency in creating
             a captivating memory game inspired by the Pokémon franchise.
-            Developed using HTML, CSS, JavaScript, React.js, and Node.js, the
+            Developed using HTML, CSS, JavaScript, React.js, Node.js and webpack, the
             project serves as a testament to my skills and dedication. The
             entire source code is openly accessible on my GitHub repository,
             allowing interested individuals to explore and gain insights from
