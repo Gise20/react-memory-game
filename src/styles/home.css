@@ -180,14 +180,14 @@
   
   /* Game name */
   .home {
-    font-size: 3.1rem;
+    font-size: 2.1rem;
     text-align: center;
     padding-left: 10%;
     padding-right: 10%;
   }
 
   .home-lbl {
-    margin-top: 20%;
+    margin-top: 25%;
   }
 
   /* Player data */
@@ -198,7 +198,7 @@
   /* Player data  */
   /* Botones */
   .home-btn_media_adjust{
-    font-size: 20px !important;
+    font-size: 15px !important;
     height: 50px !important;
   }
 
