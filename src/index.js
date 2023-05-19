@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./routes/App";
+import App from "./App";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
+import Home from "@pages/Home";
+import About from "@pages/About";
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
     <Router>

@@ -1,7 +1,7 @@
 import React from 'react'
 // Importing the EducationCard component and educationData from a JSON file
-import EducationCard from "./AboutCard";
-import EducationData from "../../assets/data/educationData.json";
+import EducationCard from "@components/About/AboutCard";
+import EducationData from "@assets/data/educationData.json";
 
 // Creating a functional component called AboutEducation
 const AboutEducation = () => {

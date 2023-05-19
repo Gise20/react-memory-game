@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
-import HomeDifficulty from './HomeDifficulty';
-import HomeRegion from './HomeRegion';
+import HomeDifficulty from '@components/Home/HomeDifficulty';
+import HomeRegion from '@components/Home/HomeRegion';
 
 const HomeDataPlay = () => {
   return (

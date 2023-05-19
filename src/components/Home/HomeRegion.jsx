@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-import HomeRegionButton from "./HomeRegionButton";
+import HomeRegionButton from "@components/Home/HomeRegionButton";
 
 // Define the HomeRegion component as a functional component
 const HomeRegion = () => {

@@ -1,7 +1,7 @@
 import React from 'react'
 // Importing the AboutHeader and AboutData components
-import AboutHeader from "./AboutHeader";
-import AboutData from "./AboutData";
+import AboutHeader from "@components/About/AboutHeader";
+import AboutData from "@components/About/AboutData";
 
 // Creating a functional component called AboutCmp
 const AboutCmp = () => {

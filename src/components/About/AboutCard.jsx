@@ -1,11 +1,11 @@
 import React from 'react'
 // Importing the logos for different institutions
-import Ucsg from "../../assets/images/education-experience/ucsg.png";
-import Platzi from "../../assets/images/education-experience/platzi.png";
-import Efset from "../../assets/images/education-experience/efset.png";
-import IkuSoft from "../../assets/images/education-experience/ikusoft.png";
-import Freelancer from "../../assets/images/education-experience/freelancer.png";
-import Bspi from "../../assets/images/education-experience/bspi.png";
+import Ucsg from "@assets/images/education-experience/ucsg.png";
+import Platzi from "@assets/images/education-experience/platzi.png";
+import Efset from "@assets/images/education-experience/efset.png";
+import IkuSoft from "@assets/images/education-experience/ikusoft.png";
+import Freelancer from "@assets/images/education-experience/freelancer.png";
+import Bspi from "@assets/images/education-experience/bspi.png";
 
 // Creating a functional component called AboutCard that takes props as input 
 const AboutCard = ({ institution, degree, years, logo, cardStyle }) => {

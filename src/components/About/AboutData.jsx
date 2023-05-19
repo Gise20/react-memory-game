@@ -2,11 +2,11 @@ import React from 'react'
 import { useNavigate } from "react-router-dom";
 
 // Importing the components used in the AboutData component
-import AboutMe from "./AboutMe";
-import AboutStack from "./AboutStack";
-import AboutProject from "./AboutProject";
-import AboutEducation from "./AboutEducation";
-import AboutExperience from "./AboutExperience";
+import AboutMe from "@components/About/AboutMe";
+import AboutStack from "@components/About/AboutStack";
+import AboutProject from "@components/About/AboutProject";
+import AboutEducation from "@components/About/AboutEducation";
+import AboutExperience from "@components/About/AboutExperience";
 
 // Creating a functional component called AboutData
 const AboutData = () => {

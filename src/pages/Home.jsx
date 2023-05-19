@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeCmp from "../components/Home/HomeCmp";
+import HomeCmp from "@components/Home/HomeCmp";
 
 const Home = () => {
   return (

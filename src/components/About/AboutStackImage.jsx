@@ -2,7 +2,7 @@ import React from 'react'
 // Creating a functional component called AboutStackImage
 const AboutStackImage = ({ alt, fileName }) => {
   // Dynamically generating the image path based on the fileName prop
-  const imagePath = require(`../../assets/images/stacks-icons/${fileName}`);
+  const imagePath = require(`@assets/images/stacks-icons/${fileName}`);
 
   return (
     <div>

@@ -1,6 +1,6 @@
 import React from 'react'
-import stacksData from "../../assets/data/stacksData.json";
-import AboutStackImage from "./AboutStackImage";
+import stacksData from "@assets/data/stacksData.json";
+import AboutStackImage from "@components/About/AboutStackImage";
 
 // Creating a functional component called AboutStack
 const AboutStack = () => {

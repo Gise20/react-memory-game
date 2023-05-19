@@ -1,6 +1,6 @@
 import React from 'react'
 import { HiDocumentText } from "react-icons/hi";
-import imgStock from "../../assets/images/stock-images/stock-image1.png";
+import imgStock from "@assets/images/stock-images/stock-image1.png";
 
 // Creating a functional component called AboutProject
 const AboutProject = () => {

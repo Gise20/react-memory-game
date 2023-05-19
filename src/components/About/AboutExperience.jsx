@@ -1,7 +1,7 @@
 import React from 'react'
 // Importing the ExperienceCard component and experienceData from a JSON file
-import ExperienceCard from "./AboutCard";
-import experienceData from "../../assets/data/experienceData.json";
+import ExperienceCard from "@components/About/AboutCard";
+import experienceData from "@assets/data/experienceData.json";
 
 // Creating a functional component called AboutExperience
 const AboutExperience = () => {
