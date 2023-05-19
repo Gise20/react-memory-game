@@ -2,9 +2,6 @@ import React from 'react'
 import { VscGithubInverted } from "react-icons/vsc";
 import { SiLinkedin } from "react-icons/si";
 
-// Import CSS stylesheets
-import "@styles/about.css";
-
 // Creating a functional component called AboutHeader
 const AboutHeader = () => {
   // Event handler for clicking the "GitHub" label

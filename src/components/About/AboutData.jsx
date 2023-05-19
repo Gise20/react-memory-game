@@ -13,7 +13,7 @@ const AboutData = () => {
   const navigate = useNavigate();
 
   // Function to handle the click event and navigate back to the "/home" route
-  const handleClickBakcToGame = () => {
+  const handleClickBackToGame = () => {
     navigate("/home");
   };
 
@@ -33,7 +33,7 @@ const AboutData = () => {
             <button
               className="button-style-3 about-data-back-game-btn"
               role="button"
-              onClick={handleClickBakcToGame}
+              onClick={handleClickBackToGame}
             >
               Back to the game
             </button>

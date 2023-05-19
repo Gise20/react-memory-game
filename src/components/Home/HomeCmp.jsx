@@ -2,10 +2,6 @@ import React from 'react'
 import HomeMenu from "@components/Home/HomeMenu";
 import HomeDataPlay from "@components/Home/HomeDataPlay";
 
-// Import CSS stylesheets
-import "@styles/home.css";
-import "@styles/extras.css";
-import "@styles/generals.css";
 
 // Define a functional component called HomeCmp
 const HomeCmp = () => {
