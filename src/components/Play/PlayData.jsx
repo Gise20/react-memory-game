@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { FcInfo } from "react-icons/fc";
 import Context from "@context/Context";
+import PlayTimer from "@components/Play/PlayTimer";
 
 const PlayData = () => {
   const data = useContext(Context);
@@ -15,7 +16,7 @@ const PlayData = () => {
           </span>
         </div>
         <span className="play-header-data-lbl-stats">Tiempo: </span>
-        <span className="play-header-data-stats">HH:MM</span>
+        <span className="play-header-data-stats"><PlayTimer/></span>
       </div>
       <div className="play-header-data-item">
         <div className="tooltip">
