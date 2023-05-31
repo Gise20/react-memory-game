@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import Context from "@context/Context";
 import Home from "@pages/Home";
 import About from "@pages/About";
 import Play from "@pages/Play";
@@ -10,14 +11,23 @@ import "@styles/extras.css";
 import "@styles/generals.css";
 
 function App() {
+  const initialState = {
+    playerName: undefined,
+    difficulty: 'MEDIUM',
+    regions: ['Kanto'],
+    score: 0,
+  };
+
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/play" element={<Play />} />
-      </Routes>
+      <Context.Provider value={initialState}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/play" element={<Play />} />
+        </Routes>
+      </Context.Provider>
     </div>
   );
 }

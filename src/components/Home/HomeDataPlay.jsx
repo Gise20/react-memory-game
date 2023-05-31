@@ -1,9 +1,33 @@
-import React from 'react'
-import { useState } from 'react';
+import React from 'react';
+import { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import HomeDifficulty from '@components/Home/HomeDifficulty';
 import HomeRegion from '@components/Home/HomeRegion';
+import Context from '@context/Context';
 
 const HomeDataPlay = () => {
+  // Hooks
+  const navigate = useNavigate();
+  const data = useContext(Context);
+  const [playerName, setPlayerName] = useState('');
+
+  // Event handler for start button
+  const handleStart = () => {
+    if (playerName.toString().trim().length === 0) {
+      Swal.fire('Player name needed');
+    } else {
+      data.playerName = playerName;
+      data.score = 0;
+      navigate('/play');
+    }
+  };
+
+  // Event handler for player name input change
+  const handleChangePlayerName = (event) => {
+    setPlayerName(event.target.value);
+  };
+
   return (
     <div>
       {/* Player data section */}
@@ -13,9 +37,10 @@ const HomeDataPlay = () => {
           <input
             className="home-input-player-name"
             placeholder="Player name"
-          ></input>
+            onChange={handleChangePlayerName}
+          />
         </div>
-        
+
         {/* HomeDifficulty component */}
         <HomeDifficulty />
 
@@ -24,7 +49,12 @@ const HomeDataPlay = () => {
 
         {/* Start button */}
         <div className="home-btn-iniciar-container">
-          <button className="home-btn-iniciar button-style-1 button-style-1-color-3 home-btn_media_adjust">Start</button>
+          <button
+            className="home-btn-iniciar button-style-1 button-style-1-color-3 home-btn_media_adjust"
+            onClick={handleStart}
+          >
+            Start
+          </button>
         </div>
       </div>
     </div>

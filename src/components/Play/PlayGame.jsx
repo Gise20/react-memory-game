@@ -2,7 +2,7 @@ import React from 'react'
 
 const PlayGame = () => {
   return (
-    <div>PlayGame</div>
+    <div className='play-game-container'>PlayGame</div>
   )
 }
 

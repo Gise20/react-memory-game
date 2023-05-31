@@ -1,15 +1,18 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { BsCheckCircleFill } from "react-icons/bs";
+import Context from '@context/Context';
 
 // Define a functional component called HomeDifficulty
 const HomeDifficulty = () => {
+  const data = useContext(Context);
 
   // Initialize difficulty as Medium using the useState hook
-  const [difficulty, setDifficulty] = useState('MED');
+  const [difficulty, setDifficulty] = useState(data.difficulty);
 
   // Event handler for when a difficulty button is clicked
   const handleDifficultyClick = (newDifficulty) => {
+    data.difficulty = newDifficulty
     setDifficulty(newDifficulty);
   };
 
@@ -22,27 +25,27 @@ const HomeDifficulty = () => {
       <div className="home-btn-difficulty-container">
         <button
           className={`home-btn-difficulty button-style-1 home-btn_media_adjust ${
-            difficulty === "EAS" ? "dificulty-selected" : ""
+            difficulty === "EASY" ? "dificulty-selected" : ""
           }`}
-          onClick={() => handleDifficultyClick("EAS")}
+          onClick={() => handleDifficultyClick("EASY")}
         >
-          <div>Easy {difficulty === "EAS" ? <BsCheckCircleFill /> : ""}</div>
+          <div>Easy {difficulty === "EASY" ? <BsCheckCircleFill /> : ""}</div>
         </button>
         <button
           className={`home-btn-difficulty button-style-1 home-btn_media_adjust ${
-            difficulty === "MED" ? "dificulty-selected" : ""
+            difficulty === "MEDIUM" ? "dificulty-selected" : ""
           }`}
-          onClick={() => handleDifficultyClick("MED")}
+          onClick={() => handleDifficultyClick("MEDIUM")}
         >
-          <div>Medium {difficulty === "MED" ? <BsCheckCircleFill /> : ""}</div>
+          <div>Medium {difficulty === "MEDIUM" ? <BsCheckCircleFill /> : ""}</div>
         </button>
         <button
           className={`home-btn-difficulty button-style-1 home-btn_media_adjust ${
-            difficulty === "HAR" ? "dificulty-selected" : ""
+            difficulty === "HARD" ? "dificulty-selected" : ""
           }`}
-          onClick={() => handleDifficultyClick("HAR")}
+          onClick={() => handleDifficultyClick("HARD")}
         >
-          <div>Hard {difficulty === "HAR" ? <BsCheckCircleFill /> : ""}</div>
+          <div>Hard {difficulty === "HARD" ? <BsCheckCircleFill /> : ""}</div>
         </button>
       </div>
     </div>

@@ -1,11 +1,16 @@
+/* Main component */
+.play-cmp-main-conatiner{
+  height: 95vh;
+}
+
 /* Header */
 .play-header-container {
   width: 92%;
   margin: 0 auto;
   margin-top: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   background-color: rgba(32, 0, 70, 0.25);
-  padding: 1.2%;
+  padding: 1.1%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,14 +38,28 @@
 }
 
 .play-header-data-lbl-stats {
-  font-size: 1.8em;
+  font-size: 1.6em;
   margin-right: 5px;
   margin-left: 5px;
   font-weight: 600;
 }
 
 .play-header-data-stats {
-    font-size: 1.6em;
+    font-size: 1.4em;
+}
+
+
+/* Play Game */
+
+.play-game-container{
+  background-color: rgba(32, 0, 70, 0.50);
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  height: 72%;
+  border-radius: 10px;
+  overflow-y: scroll;
+  
 }
 
 /* responsive */

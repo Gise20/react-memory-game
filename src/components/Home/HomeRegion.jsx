@@ -1,12 +1,19 @@
 import React from 'react'
-import { useState } from "react";
+import { useState, useEffect, useContext } from 'react';
+import Context from '@context/Context';
 import HomeRegionButton from "@components/Home/HomeRegionButton";
 
 // Define the HomeRegion component as a functional component
 const HomeRegion = () => {
+  const data = useContext(Context);
+
   // State variables to track the selected regions and select all option
-  const [selectedRegions, setSelectedRegions] = useState(["Kanto"]);
+  const [selectedRegions, setSelectedRegions] = useState(data.regions);
   const [selectAll, setSelectAll] = useState(false);
+
+  useEffect(() => {
+    data.regions = selectedRegions;
+  }, [selectedRegions]);
 
   // Event handler for the select all checkbox change
   const handleCheckboxChange = (event) => {
