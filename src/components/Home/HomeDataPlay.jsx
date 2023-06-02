@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import HomeDifficulty from '@components/Home/HomeDifficulty';
 import HomeRegion from '@components/Home/HomeRegion';
 import Context from '@context/Context';
+import useGetGameConfigData from "@hooks/useGetGameConfigData";
 
 const HomeDataPlay = () => {
   // Hooks
@@ -19,6 +20,7 @@ const HomeDataPlay = () => {
     } else {
       data.playerName = playerName;
       data.score = 0;
+      
       navigate('/play');
     }
   };

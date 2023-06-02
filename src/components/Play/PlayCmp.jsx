@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Context from "@context/Context";
 import PlayHeader from "@components/Play/PlayHeader";
 import PlayGame from "@components/Play/PlayGame";
-import { useNavigate } from "react-router-dom";
-import { useContext, useEffect } from "react";
-import Context from "@context/Context";
+import useGetGameConfigData from "@hooks/useGetGameConfigData";
 
 const PlayCmp = () => {
+  // Get data from context and navigate
   const data = useContext(Context);
   const navigate = useNavigate();
 
+  // Redirect if playerName is undefined
   useEffect(() => {
     if (data.playerName === undefined) {
       navigate("/");
     }
-  }, [data.playerName]);
+  }, [data.playerName, navigate]);
 
   return (
     <div className="play-cmp-main-conatiner">

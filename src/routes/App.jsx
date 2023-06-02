@@ -16,6 +16,8 @@ function App() {
     difficulty: 'MEDIUM',
     regions: ['Kanto'],
     score: 0,
+    numCards: 0,
+    timeBonus: 0
   };
 
   return (
