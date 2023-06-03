@@ -25,7 +25,7 @@ const HomeRegion = () => {
       const allRegions = [
         "Kanto",
         "Johto",
-        "Hoeen",
+        "Hoenn",
         "Sinnoh",
         "Unovao",
         "Kalos",
@@ -73,7 +73,7 @@ const HomeRegion = () => {
           setSelectedRegions={setSelectedRegions}
         />
         <HomeRegionButton
-          region="Hoeen"
+          region="Hoenn"
           selectedRegions={selectedRegions}
           setSelectedRegions={setSelectedRegions}
         />

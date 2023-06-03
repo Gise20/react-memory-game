@@ -7,6 +7,9 @@ import HomeRegion from '@components/Home/HomeRegion';
 import Context from '@context/Context';
 
 const HomeDataPlay = () => {
+  //pending to do, if its alola kalos or paldea, alone, cannot be hard
+
+
   // Hooks
   const navigate = useNavigate();
   const data = useContext(Context);

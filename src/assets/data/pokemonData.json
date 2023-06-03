@@ -1,0 +1,47 @@
+[
+  {
+    "region": "Kanto",
+    "starts": 1,
+    "finish": 151
+  },
+  {
+    "region": "Johto",
+    "starts": 152,
+    "finish": 251
+  },
+  {
+    "region": "Hoenn",
+    "starts": 252,
+    "finish": 386
+  },
+  {
+    "region": "Sinnoh",
+    "starts": 387,
+    "finish": 493
+  },
+  {
+    "region": "Unova",
+    "starts": 494,
+    "finish": 649
+  },
+  {
+    "region": "Kalos",
+    "starts": 650,
+    "finish": 721
+  },
+  {
+    "region": "Alola",
+    "starts": 722,
+    "finish": 809
+  },
+  {
+    "region": "Paldea",
+    "starts": 810,
+    "finish": 905
+  },
+  {
+    "region": "Galar",
+    "starts": 906,
+    "finish": 1008
+  }
+]
