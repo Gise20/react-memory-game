@@ -26,10 +26,9 @@ const PlayGame = () => {
   }, [cards]);
 
   useEffect(() => {
-    console.log(data.cardsConfirmed);
     if(data.cardsConfirmed.length == data.numCards){
-      data.dispatch({ type: "SET_CARD_CONFIRMED_RESET", payload: null });
       Swal.fire('game finish');
+      data.dispatch({ type: "SET_CLEAN_NEW_GAME", payload: null });
     }
   }, [data.cardsConfirmed]);
 

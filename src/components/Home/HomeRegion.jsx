@@ -12,7 +12,7 @@ const HomeRegion = () => {
   const [selectAll, setSelectAll] = useState(false);
 
   useEffect(() => {
-    data.regions = selectedRegions;
+    data.dispatch({ type: "SET_REGIONS", payload: selectedRegions });
   }, [selectedRegions]);
 
   // Event handler for the select all checkbox change

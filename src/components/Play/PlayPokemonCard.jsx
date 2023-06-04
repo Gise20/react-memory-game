@@ -65,7 +65,6 @@ const PlayPokemonCard = ({ id, baseState, keyValue }) => {
         data.dispatch({ type: "SET_CARD_OPENED", payload: undefined });
         data.dispatch({ type: "SET_CARD_PENDING", payload: undefined });
 
-        setCardState("Confirmed"); // Update the baseState to "Confirmed"
       } else {
         data.dispatch({ type: "SET_CARD_PENDING", payload: undefined });
       }

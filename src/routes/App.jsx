@@ -53,6 +53,12 @@ const reducer = (state, action) => {
       return { ...state, numCardOpened: action.payload };
     case "SET_CARD_KEY_OPENED":
       return { ...state, cardkeyOpened: action.payload };
+    case "SET_CLEAN_NEW_GAME":
+        return { ...state, cardPending: undefined,
+          cardOpened: undefined,
+          cardsConfirmed: [],
+          numCardOpened: 0,
+          cardkeyOpened: undefined };
     default:
       return state;
   }
