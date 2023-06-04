@@ -81,6 +81,7 @@ const PlayPokemonCard = ({ id, baseState, keyValue }) => {
 
   return (
     <div className="play-game-card-container">
+      {/* Cards unopen */}
       {cardState === "Unopen" && (
         <img
           src={cardBack}
@@ -89,6 +90,7 @@ const PlayPokemonCard = ({ id, baseState, keyValue }) => {
           onClick={handleCardClick}
         />
       )}
+      {/* Cards open */}
       {cardState === "Open" && (
         <img
           src={imagePath}
@@ -97,7 +99,7 @@ const PlayPokemonCard = ({ id, baseState, keyValue }) => {
           onClick={handleCardClick}
         />
       )}
-
+      {/* Cards confirmed */}
       {cardState === "Confirmed" && (
         <div className="play-game-card-open-confirm">
           <img
