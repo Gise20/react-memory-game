@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useMemo } from "react";
 import Context from "@context/Context";
 import useGetRandomPokemon from "@hooks/useGetRandomPokemon";
 import PlayPokemonCard from "@components/Play/PlayPokemonCard";
+import Swal from "sweetalert2";
 
 const PlayGame = () => {
   const data = useContext(Context);
@@ -24,13 +25,23 @@ const PlayGame = () => {
     return shuffled;
   }, [cards]);
 
+  useEffect(() => {
+    console.log(data.cardsConfirmed);
+    if(data.cardsConfirmed.length == data.numCards){
+      data.dispatch({ type: "SET_CARD_CONFIRMED_RESET", payload: null });
+      Swal.fire('game finish');
+    }
+  }, [data.cardsConfirmed]);
+
   return (
     <div className="play-game-container">
       {shuffledCards.map((card, index) => (
         <PlayPokemonCard
           key={index}
           id={card}
-          baseState={data.cardsConfirmed.includes(card) ? "Confirmed" : "Unopen"}
+          baseState={
+            data.cardsConfirmed.includes(card) ? "Confirmed" : "Unopen"
+          }
           cardsConfirmed={data.cardsConfirmed}
           keyValue={index}
         />

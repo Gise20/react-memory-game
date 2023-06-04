@@ -21,7 +21,7 @@ const initialState = {
   cardOpened: undefined,
   cardsConfirmed: [],
   numCardOpened: 0,
-  cardkeyOpened: undefined
+  cardkeyOpened: undefined,
 };
 
 const reducer = (state, action) => {
@@ -47,6 +47,8 @@ const reducer = (state, action) => {
         ...state,
         cardsConfirmed: [...state.cardsConfirmed, action.payload],
       };
+    case "SET_CARD_CONFIRMED_RESET":
+      return { ...state, cardsConfirmed: [] };
     case "SET_NUM_CARD_OPENED":
       return { ...state, numCardOpened: action.payload };
     case "SET_CARD_KEY_OPENED":
@@ -59,7 +61,6 @@ const reducer = (state, action) => {
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  
   return (
     <div className="App">
       <Context.Provider value={{ ...state, dispatch, initialState }}>

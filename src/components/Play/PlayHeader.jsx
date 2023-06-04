@@ -12,6 +12,7 @@ const PlayHeader = () => {
 
   // Function to handle the click event and navigate back to the "/home" route
   const handleClickBackToGame = () => {
+    data.dispatch({ type: "SET_CARD_CONFIRMED_RESET", payload: null });
     navigate("/home");
   };
 
