@@ -1,17 +1,53 @@
-import React, {useContext} from 'react'
+import React, { useContext, useEffect, useMemo } from "react";
 import Context from "@context/Context";
-import useGetRandomPokemon from '@hooks/useGetRandomPokemon';
+import useGetRandomPokemon from "@hooks/useGetRandomPokemon";
+import PlayPokemonCard from "@components/Play/PlayPokemonCard";
 
 const PlayGame = () => {
   const data = useContext(Context);
-  const regionSelected = data.regions;
-  console.log(data.numCards);
-  console.log(regionSelected);
-  console.log(useGetRandomPokemon(regionSelected, data.numCards));
- 
-  return (
-    <div className='play-game-container'>PlayGame</div>
-  )
-}
 
-export default PlayGame
+  const cards = useMemo(() => {
+    return useGetRandomPokemon(data.regions, data.numCards);
+  }, [data.regions, data.numCards]);
+
+  const shuffledCards = useMemo(() => {
+    // Duplicate each number in the array
+    const duplicatedCards = cards.flatMap((num) => [num, num]);
+
+    // Rearrange the duplicated Cards randomly
+    const shuffled = [...duplicatedCards];
+
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+
+    return shuffled;
+  }, [cards]);
+
+  useEffect(() => {
+    console.log("----------------------");
+    console.log("a card was open");
+    console.log("Opened", data.cardOpened);
+    console.log("Pending", data.cardPending);
+    console.log("Confirmed", data.cardsConfirmed);
+    console.log("NumCardOpened", data.numCardOpened);
+    console.log("----------------------");
+  }, [data.cardOpened]);
+
+  return (
+    <div className="play-game-container">
+      {shuffledCards.map((card, index) => (
+        <PlayPokemonCard
+          key={index}
+          id={card}
+          baseState={data.cardsConfirmed.includes(card) ? "Confirmed" : "Unopen"}
+          cardsConfirmed={data.cardsConfirmed}
+          keyValue={index}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default PlayGame;

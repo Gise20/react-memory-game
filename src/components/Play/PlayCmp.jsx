@@ -15,7 +15,7 @@ const PlayCmp = () => {
 
   useEffect(() => {
     if (dataContext.playerName === undefined) {
-      navigate("/");
+      // navigate("/");
     }
   }, [dataContext.playerName, navigate]);
 
