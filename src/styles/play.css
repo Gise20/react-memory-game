@@ -10,7 +10,9 @@
   margin-top: 2%;
   margin-bottom: 1%;
   background-color: rgba(32, 0, 70, 0.25);
-  padding: 1.1%;
+  padding: 0.5%;
+  padding-left: 1.1%;
+  padding-right: 1.1%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,14 +40,14 @@
 }
 
 .play-header-data-lbl-stats {
-  font-size: 1.6em;
+  font-size: 1.2em;
   margin-right: 5px;
   margin-left: 5px;
   font-weight: 600;
 }
 
 .play-header-data-stats {
-  font-size: 1.4em;
+  font-size: 1em;
 }
 
 /* Play Game */
@@ -57,27 +59,29 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  height: 72%;
+  height: 78%;
   border-radius: 10px;
   overflow-y: scroll;
-  padding: 1%;
+  padding: 0.8%;
 }
 
 .play-game-card-container {
-  width: 200px;
-  height: 200px;
+  width: 140px;
+  height: 140px;
   margin: 1%;
   background-color: rgba(32, 0, 70, 0.5);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.play-game-card-open, .play-game-card-close, .play-game-card-confirmed{
-  width: 200px;
-  height: 200px;
+.play-game-card-open,
+.play-game-card-close,
+.play-game-card-confirmed {
+  width: 140px;
+  height: 140px;
 }
 
-.play-game-card-open-confirm{
-  box-shadow: 2px 2px 2px 10px rgba(235, 152, 0, 0.75);
+.play-game-card-open-confirm {
+  box-shadow: 1px 1px 1px 8px rgba(235, 152, 0, 0.7);
   width: auto;
   height: auto;
 }
@@ -85,12 +89,89 @@
 /* responsive */
 /* Small Phones (up to 479px) */
 @media (max-width: 479px) {
+  .play-header-container{
+    display: block;
+  }
+  
+  .play-header-lbl-player-name {
+    font-size: 1.7em;
+  }
+
+  .play-header-btn-back{
+    width: 50px !important;
+    height: 50px !important;
+    padding: 2px !important;
+    min-height: 0px !important;
+  }
+
+  .play-header-data-lbl-stats {
+    color: darkgray;
+  }
+
+  .play-header-data-stats {
+    color: darkgray;
+  }
+
+  .play-game-container {
+    height: 70%;
+  }
+
+  .play-game-card-container {
+    width: 80px;
+    height: 80px;
+  }
+
+  .play-game-card-open,
+  .play-game-card-close,
+  .play-game-card-confirmed {
+    width: 80px;
+    height: 80px;
+  }
+
+  
 }
 
 /* Large Phones (480px to 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
-}
+  .play-header-data-lbl-stats {
+    font-size: 1.5em;
+    color: darkgray;
+  }
 
+  .play-header-data-stats {
+    font-size: 1.3em;
+    color: darkgray;
+  }
+
+  .play-game-container {
+    height: 88%;
+  }
+
+  .play-game-card-container {
+    width: 155px;
+    height: 155px;
+  }
+
+  .play-game-card-open,
+  .play-game-card-close,
+  .play-game-card-confirmed {
+    width: 155px;
+    height: 155px;
+  }
+}
 /* Tablets (768px to 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
+  .play-header-data-lbl-stats {
+    font-size: 1.5em;
+    color: darkgray;
+  }
+
+  .play-header-data-stats {
+    font-size: 1.3em;
+    color: darkgray;
+  }
+
+  .play-game-container {
+    height: 88%;
+  }
 }

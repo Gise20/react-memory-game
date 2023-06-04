@@ -18,7 +18,7 @@ const PlayHeader = () => {
   return (
     <div className="play-header-container">
       <div>
-        <button className="button-style-4" role="button" onClick={handleClickBackToGame}>
+        <button className="button-style-4 play-header-btn-back" role="button" onClick={handleClickBackToGame}>
           <TiArrowBack  size={30}/>
         </button>
         <label className="play-header-lbl-player-name">{data.playerName}</label>

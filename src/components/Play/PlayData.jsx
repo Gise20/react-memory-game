@@ -9,7 +9,7 @@ const PlayData = () => {
     <div className="play-header-data-container">
       <div className="play-header-data-item">
         <div className="tooltip">
-          <FcInfo size={30} />
+          <FcInfo size={20} />
           <span className="tooltiptext">
             ¡Cuanto menos tiempo, mayor puntuación! ¡Apresúrate al final para
             obtener bonificaciones de score!
@@ -20,7 +20,7 @@ const PlayData = () => {
       </div>
       <div className="play-header-data-item">
         <div className="tooltip">
-          <FcInfo size={30} />
+          <FcInfo size={20} />
           <span className="tooltiptext">
             ¡Más dificultad, más tarjetas para emparejar!
           </span>
