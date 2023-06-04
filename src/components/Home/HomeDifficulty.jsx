@@ -12,7 +12,7 @@ const HomeDifficulty = () => {
 
   // Event handler for when a difficulty button is clicked
   const handleDifficultyClick = (newDifficulty) => {
-    data.difficulty = newDifficulty
+    data.dispatch({ type: "SET_DIFFICULTY", payload: newDifficulty });
     setDifficulty(newDifficulty);
   };
 

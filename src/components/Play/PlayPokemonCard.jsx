@@ -5,7 +5,6 @@ import pokemonData from "@assets/data/pokemonData.json";
 
 const PlayPokemonCard = ({ id, baseState, keyValue }) => {
   const data = useContext(Context);
-
   const [cardState, setCardState] = useState(baseState);
   const region = getRegion();
   const cardBack = require("@assets/images/pokemon-images/card-back.png");
@@ -34,10 +33,6 @@ const PlayPokemonCard = ({ id, baseState, keyValue }) => {
   }, [data.cardsConfirmed]);
 
   const handleCardClick = () => {
-    console.log("NumOpened: ", data.numCardOpened);
-    console.log("State: ", cardState);
-    console.log("keyValue: ", keyValue);
-    console.log("cardkeyOpened: ", data.cardkeyOpened);
     if (data.cardkeyOpened != keyValue || data.cardOpened == id) {
       if (cardState == "Unopen") {
         if (data.numCardOpened < 2) {

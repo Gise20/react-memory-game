@@ -59,9 +59,10 @@ const reducer = (state, action) => {
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  
   return (
     <div className="App">
-      <Context.Provider value={{ ...state, dispatch }}>
+      <Context.Provider value={{ ...state, dispatch, initialState }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />

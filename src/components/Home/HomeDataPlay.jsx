@@ -20,7 +20,7 @@ const HomeDataPlay = () => {
     if (playerName.toString().trim().length === 0) {
       Swal.fire('Player name needed');
     } else {
-      data.playerName = playerName;
+      data.dispatch({ type: "SET_PLAYER_NAME", payload: playerName });
       data.score = 0;
       navigate('/play');
     }

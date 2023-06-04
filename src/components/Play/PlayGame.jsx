@@ -5,7 +5,6 @@ import PlayPokemonCard from "@components/Play/PlayPokemonCard";
 
 const PlayGame = () => {
   const data = useContext(Context);
-
   const cards = useMemo(() => {
     return useGetRandomPokemon(data.regions, data.numCards);
   }, [data.regions, data.numCards]);
@@ -24,16 +23,6 @@ const PlayGame = () => {
 
     return shuffled;
   }, [cards]);
-
-  useEffect(() => {
-    console.log("----------------------");
-    console.log("a card was open");
-    console.log("Opened", data.cardOpened);
-    console.log("Pending", data.cardPending);
-    console.log("Confirmed", data.cardsConfirmed);
-    console.log("NumCardOpened", data.numCardOpened);
-    console.log("----------------------");
-  }, [data.cardOpened]);
 
   return (
     <div className="play-game-container">
