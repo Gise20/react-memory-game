@@ -27,6 +27,7 @@ const PlayGame = () => {
 
   useEffect(() => {
     if(data.cardsConfirmed.length == data.numCards){
+      console.log(data.score);
       Swal.fire('game finish');
       data.dispatch({ type: "SET_CLEAN_NEW_GAME", payload: null });
     }

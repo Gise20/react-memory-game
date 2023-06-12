@@ -22,6 +22,7 @@ const initialState = {
   cardsConfirmed: [],
   numCardOpened: 0,
   cardkeyOpened: undefined,
+  timeGameSec: 0,
 };
 
 const reducer = (state, action) => {
@@ -53,12 +54,19 @@ const reducer = (state, action) => {
       return { ...state, numCardOpened: action.payload };
     case "SET_CARD_KEY_OPENED":
       return { ...state, cardkeyOpened: action.payload };
+    case "SET_TIME_GAME_SEC":
+      return { ...state, timeGameSec: action.payload };
     case "SET_CLEAN_NEW_GAME":
-        return { ...state, cardPending: undefined,
-          cardOpened: undefined,
-          cardsConfirmed: [],
-          numCardOpened: 0,
-          cardkeyOpened: undefined };
+      return {
+        ...state,
+        cardPending: undefined,
+        cardOpened: undefined,
+        cardsConfirmed: [],
+        numCardOpened: 0,
+        cardkeyOpened: undefined,
+        score: 0,
+        timeGameSec: 0
+      };
     default:
       return state;
   }

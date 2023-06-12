@@ -21,7 +21,7 @@ const HomeDataPlay = () => {
       Swal.fire('Player name needed');
     } else {
       data.dispatch({ type: "SET_PLAYER_NAME", payload: playerName });
-      data.score = 0;
+      data.dispatch({ type: "SET_SCORE", payload: 0 });
       navigate('/play');
     }
   };

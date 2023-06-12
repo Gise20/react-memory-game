@@ -64,7 +64,7 @@ const PlayPokemonCard = ({ id, baseState, keyValue }) => {
         data.dispatch({ type: "SET_NUM_CARD_OPENED", payload: 0 });
         data.dispatch({ type: "SET_CARD_OPENED", payload: undefined });
         data.dispatch({ type: "SET_CARD_PENDING", payload: undefined });
-
+        data.dispatch({ type: "SET_SCORE", payload: data.score + 200 });
       } else {
         data.dispatch({ type: "SET_CARD_PENDING", payload: undefined });
       }
