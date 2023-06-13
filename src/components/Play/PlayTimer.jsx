@@ -11,10 +11,6 @@ const PlayTimer = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       // Increment the seconds
-      data.dispatch({
-        type: "SET_TIME_GAME_SEC",
-        payload: 10,
-      });
       setSeconds((prevSeconds) => prevSeconds + 1);
     }, 1000);
 
@@ -33,6 +29,11 @@ const PlayTimer = () => {
       setMinutes(0);
       setHours((prevHours) => prevHours + 1);
     }
+
+    data.dispatch({
+      type: "SET_TIME_GAME_SEC",
+      payload: seconds + minutes * 60 + hours * 60 * 60,
+    });
   }, [seconds, minutes]);
 
   return (
