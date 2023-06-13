@@ -41,15 +41,13 @@ const PlayGame = () => {
       // calculate time bonus and show
       const timebonus = Math.floor(1000 - ((1000 * data.timeGameSec) / data.timeBonus));
 
-
       Swal.fire({
-        position: 'top-end',
-        icon: 'success',
         title: 'Time bonus',
         text: `+${timebonus}`,
         showConfirmButton: false,
         timer: 2000
       })
+
       const score = data.score + timebonus
       
       setTimeout(function() {
@@ -59,7 +57,6 @@ const PlayGame = () => {
           "success"
         );
       }, 2000);
-      console.log(data.score);
       
       data.dispatch({ type: "SET_CLEAN_NEW_GAME", payload: null });
       navigate("/");
