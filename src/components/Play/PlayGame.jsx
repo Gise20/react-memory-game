@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import Context from "@context/Context";
 import useGetRandomPokemon from "@hooks/useGetRandomPokemon";
 import PlayPokemonCard from "@components/Play/PlayPokemonCard";
@@ -6,6 +7,7 @@ import Swal from "sweetalert2";
 
 const PlayGame = () => {
   const data = useContext(Context);
+  const navigate = useNavigate();
   const cards = useMemo(() => {
     return useGetRandomPokemon(data.regions, data.numCards);
   }, [data.regions, data.numCards]);
@@ -27,8 +29,12 @@ const PlayGame = () => {
 
   useEffect(() => {
     if(data.cardsConfirmed.length == data.numCards){
-      console.log(data.score);
-      Swal.fire('game finish');
+      Swal.fire(
+        'Congratulations',
+        `You have finish the game on ${data.difficulty}  with a score of ${data.score}`,
+        'success'
+      )
+      navigate("/");
       data.dispatch({ type: "SET_CLEAN_NEW_GAME", payload: null });
     }
   }, [data.cardsConfirmed]);

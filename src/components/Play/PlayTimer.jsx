@@ -15,7 +15,6 @@ const PlayTimer = () => {
         type: "SET_TIME_GAME_SEC",
         payload: 10,
       });
-      console.log(data.timeGameSec)
       setSeconds((prevSeconds) => prevSeconds + 1);
     }, 1000);
 
