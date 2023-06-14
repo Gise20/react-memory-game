@@ -21,7 +21,6 @@ const HomeRegionButton = ({ region, selectedRegions, setSelectedRegions }) => {
       setSelectedRegions([...selectedRegions, region]);
     }
   };
-  console.log(isSelected);
   // Render the component
   return (
     <button

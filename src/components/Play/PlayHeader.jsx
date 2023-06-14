@@ -6,7 +6,7 @@ import Context from "@context/Context";
 
 import PlayData from "@components/Play/PlayData";
 
-const PlayHeader = () => {
+const PlayHeader = ({setTime}) => {
   const data = useContext(Context)
   const navigate = useNavigate();
 
@@ -25,10 +25,10 @@ const PlayHeader = () => {
         <label className="play-header-lbl-player-name">{data.playerName}</label>
       </div>
       <div>
-        <PlayData />
+        <PlayData setTime={setTime} />
       </div>
     </div>
   );
 };
 
-export default PlayHeader;
+export default React.memo(PlayHeader);

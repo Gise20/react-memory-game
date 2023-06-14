@@ -119,4 +119,4 @@ const PlayPokemonCard = ({ id, baseState, keyValue }) => {
   );
 };
 
-export default PlayPokemonCard;
+export default React.memo(PlayPokemonCard);

@@ -1,8 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
-import Context from "@context/Context";
+import React, { useState, useEffect } from "react";
 
-const PlayTimer = () => {
-  const data = useContext(Context);
+const PlayTimer = ({setTime}) => {
 
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -30,10 +28,7 @@ const PlayTimer = () => {
       setHours((prevHours) => prevHours + 1);
     }
 
-    data.dispatch({
-      type: "SET_TIME_GAME_SEC",
-      payload: seconds + minutes * 60 + hours * 60 * 60,
-    });
+    setTime(seconds + minutes * 60 + hours * 60 * 60);
   }, [seconds, minutes]);
 
   return (
