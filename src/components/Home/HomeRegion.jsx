@@ -4,7 +4,7 @@ import Context from '@context/Context';
 import HomeRegionButton from "@components/Home/HomeRegionButton";
 
 // Define the HomeRegion component as a functional component
-const HomeRegion = () => {
+const HomeRegion = ({ setMainSelectedRegions }) => {
   const data = useContext(Context);
 
   // State variables to track the selected regions and select all option
@@ -12,7 +12,7 @@ const HomeRegion = () => {
   const [selectAll, setSelectAll] = useState(false);
 
   useEffect(() => {
-    data.regions = selectedRegions;
+    setMainSelectedRegions(selectedRegions);
   }, [selectedRegions]);
 
   // Event handler for the select all checkbox change
@@ -116,4 +116,4 @@ const HomeRegion = () => {
   );
 };
 
-export default HomeRegion; // Export the HomeRegion component as the default export
+export default React.memo(HomeRegion); // Export the HomeRegion component as the default export

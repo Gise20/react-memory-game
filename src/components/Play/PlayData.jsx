@@ -3,7 +3,7 @@ import { FcInfo } from "react-icons/fc";
 import Context from "@context/Context";
 import PlayTimer from "@components/Play/PlayTimer";
 
-const PlayData = () => {
+const PlayData = ({ setTime, gameData }) => {
   const data = useContext(Context);
   return (
     <div className="play-header-data-container">
@@ -16,7 +16,9 @@ const PlayData = () => {
           </span>
         </div>
         <span className="play-header-data-lbl-stats">Tiempo: </span>
-        <span className="play-header-data-stats"><PlayTimer/></span>
+        <span className="play-header-data-stats">
+          <PlayTimer setTime={setTime} />
+        </span>
       </div>
       <div className="play-header-data-item">
         <div className="tooltip">
@@ -30,10 +32,10 @@ const PlayData = () => {
       </div>
       <div className="play-header-data-item">
         <span className="play-header-data-lbl-stats">Score: </span>
-        <span className="play-header-data-stats">{data.score}</span>
+        <span className="play-header-data-stats">{gameData.score}</span>
       </div>
     </div>
   );
 };
 
-export default PlayData;
+export default React.memo(PlayData);

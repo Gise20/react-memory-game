@@ -1,82 +1,98 @@
 import React, { useState, useEffect, useContext } from "react";
 import Context from "@context/Context";
-import Swal from "sweetalert2";
 import pokemonData from "@assets/data/pokemonData.json";
 
-const PlayPokemonCard = ({ id, baseState, keyValue }) => {
+const PlayPokemonCard = ({ id, baseState, keyValue, gameData, setGameData}) => {
   const data = useContext(Context);
   const [cardState, setCardState] = useState(baseState);
+  // Get the region based on the Pokemon's ID
   const region = getRegion();
+
+  // Set the image paths for the card back and the opened card
   const cardBack = require("@assets/images/pokemon-images/card-back.png");
   const imagePath = require(`@assets/images/pokemon-images/${region.toLowerCase()}/${id}.png`);
 
+  // Handle card state changes when data related to card opening changes
   useEffect(() => {
-    if (data.cardOpened !== data.cardPending) {
+    if (gameData.cardOpened !== gameData.cardPending) {
       if (cardState === "Open") {
-        if (data.cardsConfirmed.includes(id)) {
+        if (gameData.cardsConfirmed.includes(id)) {
           setCardState("Confirmed");
         } else {
           const timer = setTimeout(() => {
             setCardState("Unopen");
-            data.dispatch({ type: "SET_NUM_CARD_OPENED", payload: 0 });
+            setGameData(prevState => ({
+              ...prevState,
+              numCardOpened: 0
+            }));
           }, 1000);
           return () => clearTimeout(timer);
         }
       }
     }
-  }, [cardState, data.cardsConfirmed, data.cardOpened, data.cardPending, id]);
-
+  }, [cardState, gameData.cardsConfirmed, gameData.cardOpened, gameData.cardPending, id]);
+ 
+  // Handle card state changes when the list of confirmed cards is updated
   useEffect(() => {
-    if (data.cardsConfirmed.includes(id)) {
+    if (gameData.cardsConfirmed.includes(id)) {
       setCardState("Confirmed");
     }
-  }, [data.cardsConfirmed]);
+  }, [gameData.cardsConfirmed]);
 
+  // Handle card click event
   const handleCardClick = () => {
-    if (data.cardkeyOpened != keyValue || data.cardOpened == id) {
-      if (cardState == "Unopen") {
-        if (data.numCardOpened < 2) {
-          handleCardLogic();
-          handleClick();
-        }
+    if (gameData.cardkeyOpened != keyValue || gameData.cardOpened == id) {
+      if (cardState == "Unopen" && gameData.numCardOpened < 2) {
+        handleCardLogic();
+        handleClick();
       }
     }
   };
 
+  // Update the card state and related data when a card is opened
   const handleCardLogic = () => {
-    data.dispatch({ type: "SET_CARD_OPENED", payload: id });
-    data.dispatch({ type: "SET_CARD_KEY_OPENED", payload: keyValue });
-    data.dispatch({
-      type: "SET_NUM_CARD_OPENED",
-      payload: data.numCardOpened + 1,
-    });
-    if (data.cardPending === undefined) {
-      data.dispatch({ type: "SET_CARD_PENDING", payload: id });
+    setGameData(prevState => ({
+      ...prevState,
+      cardOpened: id,
+      cardkeyOpened: keyValue,
+      numCardOpened: gameData.numCardOpened + 1
+    }));
+
+    if (gameData.cardPending === undefined) {
+      setGameData(prevState => ({
+        ...prevState,
+        cardPending: id,
+      }));
     } else {
-      if (data.cardPending === id) {
-        data.dispatch({ type: "ADD_CARD_CONFIRMED", payload: id });
-        data.dispatch({ type: "SET_NUM_CARD_OPENED", payload: 0 });
-        data.dispatch({ type: "SET_CARD_OPENED", payload: undefined });
-        data.dispatch({ type: "SET_CARD_PENDING", payload: undefined });
-        
-        Swal.fire("carta igual");
-        setCardState("Confirmed"); // Update the baseState to "Confirmed"
+      if (gameData.cardPending === id) {
+        setGameData(prevState => ({
+          ...prevState,
+          cardsConfirmed: [...prevState.cardsConfirmed, id],
+          numCardOpened: 0,
+          cardOpened: undefined,
+          cardPending: undefined,
+          score: gameData.score + 200
+        }))
       } else {
-        data.dispatch({ type: "SET_CARD_PENDING", payload: undefined });
+        setGameData(prevState => ({
+          ...prevState,
+          cardPending: undefined,
+        }));
       }
     }
   };
 
+  // Update the card state to "Open" when clicked
   const handleClick = () => {
     setCardState("Open");
   };
 
+  // Get the region based on the Pokemon's ID
   function getRegion() {
-    for (let i = 0; i < pokemonData.length; i++) {
-      if (id >= pokemonData[i].starts && id <= pokemonData[i].finish) {
-        return pokemonData[i].region;
-      }
-    }
+    const pokemon = pokemonData.find(
+      (pokemon) => id >= pokemon.starts && id <= pokemon.finish
+    );
+    return pokemon ? pokemon.region : null;
   }
 
   return (
@@ -94,7 +110,7 @@ const PlayPokemonCard = ({ id, baseState, keyValue }) => {
       {cardState === "Open" && (
         <img
           src={imagePath}
-          alt="Card Back"
+          alt="Card opened"
           className="play-game-card-open"
           onClick={handleCardClick}
         />
@@ -104,7 +120,7 @@ const PlayPokemonCard = ({ id, baseState, keyValue }) => {
         <div className="play-game-card-open-confirm">
           <img
             src={imagePath}
-            alt="Card Back"
+            alt="Card confirmed"
             className="play-game-card-confirmed"
             onClick={handleCardClick}
           />
@@ -114,4 +130,4 @@ const PlayPokemonCard = ({ id, baseState, keyValue }) => {
   );
 };
 
-export default PlayPokemonCard;
+export default React.memo(PlayPokemonCard);

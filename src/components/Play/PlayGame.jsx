@@ -3,8 +3,9 @@ import Context from "@context/Context";
 import useGetRandomPokemon from "@hooks/useGetRandomPokemon";
 import PlayPokemonCard from "@components/Play/PlayPokemonCard";
 
-const PlayGame = () => {
+const PlayGame = ({ gameData, setGameData }) => {
   const data = useContext(Context);
+  
   const cards = useMemo(() => {
     return useGetRandomPokemon(data.regions, data.numCards);
   }, [data.regions, data.numCards]);
@@ -30,8 +31,10 @@ const PlayGame = () => {
         <PlayPokemonCard
           key={index}
           id={card}
-          baseState={data.cardsConfirmed.includes(card) ? "Confirmed" : "Unopen"}
-          cardsConfirmed={data.cardsConfirmed}
+          baseState={
+            data.cardsConfirmed.includes(card) ? "Confirmed" : "Unopen"
+          }
+          gameData={gameData} setGameData={setGameData}
           keyValue={index}
         />
       ))}
@@ -39,4 +42,4 @@ const PlayGame = () => {
   );
 };
 
-export default PlayGame;
+export default React.memo(PlayGame);

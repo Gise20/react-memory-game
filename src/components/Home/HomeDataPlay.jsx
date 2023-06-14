@@ -7,21 +7,22 @@ import HomeRegion from '@components/Home/HomeRegion';
 import Context from '@context/Context';
 
 const HomeDataPlay = () => {
-  //pending to do, if its alola kalos or paldea, alone, cannot be hard
-
-
   // Hooks
   const navigate = useNavigate();
   const data = useContext(Context);
   const [playerName, setPlayerName] = useState('');
+  const [selectedDifficulty, setSelectedDifficulty,] = useState(data.difficulty);
+  const [selectedRegions, setSelectedRegions,] = useState(data.regions);
 
   // Event handler for start button
   const handleStart = () => {
     if (playerName.toString().trim().length === 0) {
       Swal.fire('Player name needed');
     } else {
+      data.dispatch({ type: "SET_REGIONS", payload: selectedRegions });
+      data.dispatch({ type: "SET_DIFFICULTY", payload: selectedDifficulty });
       data.dispatch({ type: "SET_PLAYER_NAME", payload: playerName });
-      data.score = 0;
+      data.dispatch({ type: "SET_SCORE", payload: 0 });
       navigate('/play');
     }
   };
@@ -30,7 +31,6 @@ const HomeDataPlay = () => {
   const handleChangePlayerName = (event) => {
     setPlayerName(event.target.value);
   };
-
   return (
     <div>
       {/* Player data section */}
@@ -45,10 +45,10 @@ const HomeDataPlay = () => {
         </div>
 
         {/* HomeDifficulty component */}
-        <HomeDifficulty />
+        <HomeDifficulty setSelectedDifficulty={setSelectedDifficulty}/>
 
         {/* HomeRegion component */}
-        <HomeRegion />
+        <HomeRegion setMainSelectedRegions={setSelectedRegions}/>
 
         {/* Start button */}
         <div className="home-btn-iniciar-container">

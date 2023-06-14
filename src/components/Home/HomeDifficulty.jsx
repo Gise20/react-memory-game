@@ -4,16 +4,16 @@ import { BsCheckCircleFill } from "react-icons/bs";
 import Context from '@context/Context';
 
 // Define a functional component called HomeDifficulty
-const HomeDifficulty = () => {
-  const data = useContext(Context);
+const HomeDifficulty = ({ setSelectedDifficulty }) => {
 
+  const data = useContext(Context);
   // Initialize difficulty as Medium using the useState hook
   const [difficulty, setDifficulty] = useState(data.difficulty);
 
   // Event handler for when a difficulty button is clicked
   const handleDifficultyClick = (newDifficulty) => {
-    data.dispatch({ type: "SET_DIFFICULTY", payload: newDifficulty });
     setDifficulty(newDifficulty);
+    setSelectedDifficulty(newDifficulty);
   };
 
   // Render the component
@@ -52,4 +52,4 @@ const HomeDifficulty = () => {
   );
 };
 
-export default HomeDifficulty; // Export the HomeDifficulty component as the default export
+export default React.memo(HomeDifficulty); // Export the HomeDifficulty component as the default export

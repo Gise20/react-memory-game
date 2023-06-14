@@ -12,17 +12,26 @@ const PlayCmp = () => {
   const dataContext = useContext(Context);
   const backendHost = settings[0]["backend-host"];
   const navigate = useNavigate();
-
+  
   useEffect(() => {
     if (dataContext.playerName === undefined) {
-      // navigate("/");
+      navigate("/");
     }
   }, [dataContext.playerName, navigate]);
 
   // State variable to store data from API
   const [NumCards, setNumCards] = useState(null);
   const [TimeBonus, setTimeBonus] = useState(null);
+  const [time, setTime] = useState(0);
 
+  const [gameData, setGameData] = useState({
+    score: 0,
+    cardPending: undefined,
+    cardOpened: undefined,
+    cardsConfirmed: [],
+    numCardOpened: 0,
+    cardkeyOpened: undefined
+  });
   // UseEffect hook to fetch data from API and update state variable
   useEffect(() => {
     const getApiData = async () => {
@@ -56,6 +65,42 @@ const PlayCmp = () => {
     getApiData();
   }, []);
 
+  useEffect(() => {
+    if (gameData.cardsConfirmed.length == dataContext.numCards  && dataContext.numCards >0) {
+      // format time
+      const hours = Math.floor(time / 3600)
+        .toString()
+        .padStart(2, "0");
+      const minutes = Math.floor((time  % 3600) / 60)
+        .toString()
+        .padStart(2, "0");
+      const remainingSeconds = (time  % 60).toString().padStart(2, "0");
+
+      // calculate time bonus and show
+      const timebonus = Math.floor(1000 - ((1000 * time) / dataContext.timeBonus));
+
+      Swal.fire({
+        title: 'Time bonus',
+        text: `+${timebonus}`,
+        showConfirmButton: false,
+        timer: 2000
+      })
+
+      const score = gameData.score + timebonus
+      
+      setTimeout(function() {
+        Swal.fire(
+          "Congratulations",
+          `You have finish the game on ${dataContext.difficulty}  with a score of ${score} in ${hours}:${minutes}:${remainingSeconds}`,
+          "success"
+        );
+      }, 2000);
+      
+      dataContext.dispatch({ type: "SET_CLEAN_NEW_GAME", payload: null });
+      navigate("/");
+    }
+  }, [gameData]);
+
   // Render PlayHeader and PlayGame components if data is not null
   if (NumCards && TimeBonus) {
     let difficulty =
@@ -65,8 +110,8 @@ const PlayCmp = () => {
     dataContext.timeBonus= TimeBonus[0][difficulty];
     return (
       <div className="play-cmp-main-conatiner">
-        <PlayHeader />
-        <PlayGame />
+        <PlayHeader setTime={setTime} gameData={gameData}/>
+        <PlayGame gameData={gameData} setGameData={setGameData}/>
       </div>
     );
   } else {
@@ -74,4 +119,4 @@ const PlayCmp = () => {
   }
 };
 
-export default PlayCmp;
+export default React.memo(PlayCmp);
