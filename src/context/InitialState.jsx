@@ -2,7 +2,6 @@ export const initialState = {
     playerName: undefined,
     difficulty: "MEDIUM",
     regions: ["Kanto"],
-    score: 0,
     numCards: 0,
     timeBonus: 0,
     cardPending: undefined,
@@ -21,8 +20,6 @@ export const initialState = {
         return { ...state, difficulty: action.payload };
       case "SET_REGIONS":
         return { ...state, regions: action.payload };
-      case "SET_SCORE":
-        return { ...state, score: action.payload };
       case "SET_NUM_CARDS":
         return { ...state, numCards: action.payload };
       case "SET_TIME_BONUS":
@@ -52,7 +49,6 @@ export const initialState = {
           cardsConfirmed: [],
           numCardOpened: 0,
           cardkeyOpened: undefined,
-          score: 0,
           timeGameSec: 0,
         };
       default:

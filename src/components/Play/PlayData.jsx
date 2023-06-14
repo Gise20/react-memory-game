@@ -3,7 +3,7 @@ import { FcInfo } from "react-icons/fc";
 import Context from "@context/Context";
 import PlayTimer from "@components/Play/PlayTimer";
 
-const PlayData = ({ setTime }) => {
+const PlayData = ({ setTime, gameData }) => {
   const data = useContext(Context);
   return (
     <div className="play-header-data-container">
@@ -32,7 +32,7 @@ const PlayData = ({ setTime }) => {
       </div>
       <div className="play-header-data-item">
         <span className="play-header-data-lbl-stats">Score: </span>
-        <span className="play-header-data-stats">{data.score}</span>
+        <span className="play-header-data-stats">{gameData.score}</span>
       </div>
     </div>
   );

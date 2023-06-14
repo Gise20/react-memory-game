@@ -110,7 +110,7 @@ const PlayCmp = () => {
     dataContext.timeBonus= TimeBonus[0][difficulty];
     return (
       <div className="play-cmp-main-conatiner">
-        <PlayHeader setTime={setTime}/>
+        <PlayHeader setTime={setTime} gameData={gameData}/>
         <PlayGame gameData={gameData} setGameData={setGameData}/>
       </div>
     );
