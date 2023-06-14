@@ -1,11 +1,9 @@
 import React, { useContext, useEffect, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
 import Context from "@context/Context";
 import useGetRandomPokemon from "@hooks/useGetRandomPokemon";
 import PlayPokemonCard from "@components/Play/PlayPokemonCard";
-import Swal from "sweetalert2";
 
-const PlayGame = () => {
+const PlayGame = ({ gameData, setGameData }) => {
   const data = useContext(Context);
   
   const cards = useMemo(() => {
@@ -36,7 +34,7 @@ const PlayGame = () => {
           baseState={
             data.cardsConfirmed.includes(card) ? "Confirmed" : "Unopen"
           }
-          cardsConfirmed={data.cardsConfirmed}
+          gameData={gameData} setGameData={setGameData}
           keyValue={index}
         />
       ))}

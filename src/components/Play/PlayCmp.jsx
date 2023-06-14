@@ -23,6 +23,15 @@ const PlayCmp = () => {
   const [NumCards, setNumCards] = useState(null);
   const [TimeBonus, setTimeBonus] = useState(null);
   const [time, setTime] = useState(0);
+
+  const [gameData, setGameData] = useState({
+    score: 0,
+    cardPending: undefined,
+    cardOpened: undefined,
+    cardsConfirmed: [],
+    numCardOpened: 0,
+    cardkeyOpened: undefined
+  });
   // UseEffect hook to fetch data from API and update state variable
   useEffect(() => {
     const getApiData = async () => {
@@ -57,7 +66,7 @@ const PlayCmp = () => {
   }, []);
 
   useEffect(() => {
-    if (dataContext.cardsConfirmed.length == dataContext.numCards  && dataContext.numCards >0) {
+    if (gameData.cardsConfirmed.length == dataContext.numCards  && dataContext.numCards >0) {
       // format time
       const hours = Math.floor(time / 3600)
         .toString()
@@ -77,7 +86,7 @@ const PlayCmp = () => {
         timer: 2000
       })
 
-      const score = dataContext.score + timebonus
+      const score = gameData.score + timebonus
       
       setTimeout(function() {
         Swal.fire(
@@ -90,7 +99,7 @@ const PlayCmp = () => {
       dataContext.dispatch({ type: "SET_CLEAN_NEW_GAME", payload: null });
       navigate("/");
     }
-  }, [dataContext.cardsConfirmed]);
+  }, [gameData]);
 
   // Render PlayHeader and PlayGame components if data is not null
   if (NumCards && TimeBonus) {
@@ -102,7 +111,7 @@ const PlayCmp = () => {
     return (
       <div className="play-cmp-main-conatiner">
         <PlayHeader setTime={setTime}/>
-        <PlayGame/>
+        <PlayGame gameData={gameData} setGameData={setGameData}/>
       </div>
     );
   } else {

@@ -2,10 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import Context from "@context/Context";
 import pokemonData from "@assets/data/pokemonData.json";
 
-const PlayPokemonCard = ({ id, baseState, keyValue }) => {
+const PlayPokemonCard = ({ id, baseState, keyValue, gameData, setGameData}) => {
   const data = useContext(Context);
   const [cardState, setCardState] = useState(baseState);
-
   // Get the region based on the Pokemon's ID
   const region = getRegion();
 
@@ -15,33 +14,35 @@ const PlayPokemonCard = ({ id, baseState, keyValue }) => {
 
   // Handle card state changes when data related to card opening changes
   useEffect(() => {
-    if (data.cardOpened !== data.cardPending) {
+    if (gameData.cardOpened !== gameData.cardPending) {
       if (cardState === "Open") {
-        if (data.cardsConfirmed.includes(id)) {
+        if (gameData.cardsConfirmed.includes(id)) {
           setCardState("Confirmed");
         } else {
           const timer = setTimeout(() => {
             setCardState("Unopen");
-            data.dispatch({ type: "SET_NUM_CARD_OPENED", payload: 0 });
+            setGameData(prevState => ({
+              ...prevState,
+              numCardOpened: 0
+            }));
           }, 1000);
           return () => clearTimeout(timer);
         }
       }
     }
-  }, [cardState, data.cardsConfirmed, data.cardOpened, data.cardPending, id]);
-
-
+  }, [cardState, gameData.cardsConfirmed, gameData.cardOpened, gameData.cardPending, id]);
+ 
   // Handle card state changes when the list of confirmed cards is updated
   useEffect(() => {
-    if (data.cardsConfirmed.includes(id)) {
+    if (gameData.cardsConfirmed.includes(id)) {
       setCardState("Confirmed");
     }
-  }, [data.cardsConfirmed]);
+  }, [gameData.cardsConfirmed]);
 
   // Handle card click event
   const handleCardClick = () => {
-    if (data.cardkeyOpened != keyValue || data.cardOpened == id) {
-      if (cardState == "Unopen" && data.numCardOpened < 2) {
+    if (gameData.cardkeyOpened != keyValue || gameData.cardOpened == id) {
+      if (cardState == "Unopen" && gameData.numCardOpened < 2) {
         handleCardLogic();
         handleClick();
       }
@@ -50,23 +51,33 @@ const PlayPokemonCard = ({ id, baseState, keyValue }) => {
 
   // Update the card state and related data when a card is opened
   const handleCardLogic = () => {
-    data.dispatch({ type: "SET_CARD_OPENED", payload: id });
-    data.dispatch({ type: "SET_CARD_KEY_OPENED", payload: keyValue });
-    data.dispatch({
-      type: "SET_NUM_CARD_OPENED",
-      payload: data.numCardOpened + 1,
-    });
-    if (data.cardPending === undefined) {
-      data.dispatch({ type: "SET_CARD_PENDING", payload: id });
+    setGameData(prevState => ({
+      ...prevState,
+      cardOpened: id,
+      cardkeyOpened: keyValue,
+      numCardOpened: gameData.numCardOpened + 1
+    }));
+
+    if (gameData.cardPending === undefined) {
+      setGameData(prevState => ({
+        ...prevState,
+        cardPending: id,
+      }));
     } else {
-      if (data.cardPending === id) {
-        data.dispatch({ type: "ADD_CARD_CONFIRMED", payload: id });
-        data.dispatch({ type: "SET_NUM_CARD_OPENED", payload: 0 });
-        data.dispatch({ type: "SET_CARD_OPENED", payload: undefined });
-        data.dispatch({ type: "SET_CARD_PENDING", payload: undefined });
-        data.dispatch({ type: "SET_SCORE", payload: data.score + 200 });
+      if (gameData.cardPending === id) {
+        setGameData(prevState => ({
+          ...prevState,
+          cardsConfirmed: [...prevState.cardsConfirmed, id],
+          numCardOpened: 0,
+          cardOpened: undefined,
+          cardPending: undefined,
+          score: gameData.score + 200
+        }))
       } else {
-        data.dispatch({ type: "SET_CARD_PENDING", payload: undefined });
+        setGameData(prevState => ({
+          ...prevState,
+          cardPending: undefined,
+        }));
       }
     }
   };
